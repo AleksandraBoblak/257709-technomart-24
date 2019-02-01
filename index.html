@@ -69,8 +69,6 @@
                     <p>Дрели</p>
                     <p>Соседям на радость!</p>
                     <a class="button" href="technomart-catalog.psd">Открыть каталог</a>
-                    <button class="slider-button-left">Влево</button>
-                    <button class="slider-button-right">Вправо</button>
                 </li>
                 <li class="slider-2">
                     <p>Перфораторы</p>
@@ -78,6 +76,8 @@
                     <a class="button" href="technomart-catalog.psd">Открыть каталог</a>
                 </li>
             </ul>
+            <button class="slider-button-left">Влево</button>
+            <button class="slider-button-right">Вправо</button>
         </section>
         <section class="popular-goods">
             <h2>Популярные товары</h2>
@@ -281,9 +281,28 @@
                     <h2>Контакты</h2>
                     <p>Вы можете забрать товар сами,<br> заехав в наш офис:</p>
                     <img src="img/map.jpg" width="300" height="158" alt="Карта офиса по адресу ул.Б. Конюшенная, д. 19/8">
-                    <button class="main-feedback-popup">Заблудились? Напишите нам</button>
+                    <button class="main-feedback-button">Заблудились? Напишите нам</button>
                 </section>
             </div>
+            <section class="feedback-popup">
+                <h2 class="visually-hidden">Написать письмо</h2>
+                <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+                    <p class="feedback-item">
+                        <label for="feedback-name">Ваше имя</label>
+                        <input id="feedback-name" type="text" name="name" value="" placeholder="Имя Фамилия">
+                    </p>
+                    <p class="feedback-item">
+                        <label for="feedback-email">Ваш e-mail</label>
+                        <input id="feedback-email" type="email" name="name" value="" placeholder="email@example.com">
+                    </p>
+                    <p class="feedback-item">
+                        <label for="feedback-text">Текст письма</label>
+                        <textarea id="feedback-text" rows="10" name="text" placeholder="В свободной форме">
+                        </textarea>
+                    </p>
+                    <button class="button" type="submit">Отправить</button>
+                </form> 
+            </section>
         </main>
         <footer class="main-footer">
             <section class="footer-navigation">
