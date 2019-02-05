@@ -2,10 +2,10 @@ body {
     margin: 0;
     padding: 0;
     
-    font-family: PTSans, Arial, sans-serif;;
+    font-family: PTSans, Arial, sans-serif;
     font-size: 13px;
     line-height: 24px;
-    font-weight: 400;
+    font-weight: normal;
     color: rgb(0, 0, 0);
     
     background-color: #ffffff;
@@ -27,9 +27,64 @@ header,
 }
 
 .header-top,
-.header-bottom {
+.header-bottom,
+.search {
     color: rgb(255, 255, 255);
     background-color: #293449;
+}
+
+.header-logo:hover,
+.header-logo:focus {
+    filter: brightness(90%);
+}
+
+.header-logo:active {
+    filter: brightness(80%);
+}
+
+.search {
+    border: none;
+}
+
+.search::placeholder {
+    font-family: Cuprum, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 18px;
+    color: #ffffff;
+}
+
+.search:focus {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.header-top a:hover,
+.header-top a:focus,
+.search:hover,
+.site-navigation a:hover,
+.site-navigation a:focus {
+    background-color: #212a3a;
+}
+
+.header-top a:active,
+.site-navigation a:active,
+.site-navigation a:active {
+    background-color: #161d29;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.button.order {
+    background-color: #63a63e;
+}
+
+.button.order:hover,
+.button.order:focus {
+    background-color: #5fbb2d;
+}
+
+.button.order:active {
+    background-color: #518534;
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .header-middle > h1, 
@@ -66,6 +121,17 @@ header,
 .user-navigation a {
     color: #000000;
     background-color: #ffffff;
+    font-size: 21px;
+    line-height: 21px;
+}
+
+.user-navigation a:hover,
+.user-navigation a:focus {
+    color: #ee3643;
+}
+
+.user-navigation a:active {
+    color: rgba(0, 0, 0, 0.3);
 }
 
 address {
@@ -97,6 +163,19 @@ address {
 
 .promo-item.materials {
     background-color: #ffbf47;
+}
+
+.promo a {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.promo a:hover,
+.promo a:focus {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.promo a:active {
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .promo-item.tool {
@@ -144,6 +223,15 @@ address {
     line-height: 24px;
 }
 
+.slider a:hover,
+.slider a:focus {
+    background-color: #ca2c37;
+}
+
+.slider a:active {
+    background-color: #ba2732;
+}
+
 .popular-goods h2,
 .brands-popular h2 {
     font-family: Cuprum, Arial, sans-serif;;
@@ -156,8 +244,13 @@ address {
 }
 
 .brands-popular .button,
-.popular-goods .button {
+.popular-goods .button,
+.learn-more-button,
+.main-feedback-button,
+.feedback-form-button,
+.slider .button {
     background-color: #ee3643;
+    border: none;
 }
 
 .brands-popular,
@@ -165,7 +258,8 @@ address {
     font-family: "PTSans";
 }
 
-.catalog-list {
+.catalog-list,
+.services-menu {
     list-style: none;
 }
 
@@ -201,14 +295,175 @@ address {
     border: none;
 }
 
+.button.buy:hover,
+.button.buy:focus {
+    background-color: #5fbb2d;
+}
+
+.button.buy:active {
+    background-color: #518534;
+}
+
 .button.add-to-bookmarks {
     background-color: #ffffff;
     color: #32425c;
     border: #63a63e 3px solid;
 }
 
-.services-title {
-    font-family: Cuprum, Arial, sans-serif;;
+.button.add-to-bookmarks:hover,
+.button.add-to-bookmarks:focus {
+    border: #32425c 3px solid;
+}
+
+.button.add-to-bookmarks:active {
+    border: rgba(50, 66, 92, 0.3) 3px solid;
+    color: rgba(50, 66, 92, 0.3);
+}
+
+.brands-icons-list img:hover,
+.brands-icons-list img:focus {
+    box-shadow: 0px 5px 25px 0px
+        rgba(41, 52, 73, 0.5);
+}
+
+.brands-icons-list img:active {
+    filter: opacity(0.3);
+    box-shadow: 0px 5px 10px 0px
+    rgba(41, 52, 73, 0.5);
+}
+
+.services-title,
+.main-aboutus-title,
+.main-contacts-title {
+    font-family: Cuprum, Arial, sans-serif;
     font-size: 30px;
     line-height: 30px;
+    color: #000000;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.services-menu {
+    font-family:  Cuprum, Arial, sans-serif;
+}
+
+.services-button {
+    font-size: 21px;
+    line-height: 30px;
+    color: #ffffff;
+    background-color: #32425c;
+    font-weight: bold;
+}
+
+.services-button:hover,
+.services-button:focus {
+    background-color: #293449;
+}
+
+.services-button:active {
+    background-color: #ffffff;
+    color: #32425c;
+}
+
+.services-button.current {
+    background-color: #ffffff;
+    color: #32425c;
+}
+
+.services-item-title {
+    font-family: Cuprum, Arial, sans-serif;
+    font-size: 36px;
+    line-height: 36px;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: #32425c;
+}
+
+.partners-list {
+    font-weight: 18px;
+    line-height: 20px;
+    list-style: none;
+}
+
+.feedback-item > label {
+    font-family: Cuprum, Arial, sans-serif;
+    font-size: 18px;
+    line-height: 18px;
+}
+
+.feedback-item {
+    line-height: 24px;
+}
+
+::placeholder {
+    font-family: PTSans, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.footer-navigation {
+    background-color: #32425c;
+    color: #ffffff;
+}
+
+.footer-contacts > address,
+footer a,
+.footer-links {
+    color: #ffffff;
+    font-family: Cuprum, Arial, sans-serif;
+    font-size: 18px;
+}
+
+.footer-links {
+    background-color: #293449;
+}
+
+.footer-site-navigation,
+.promo-link,
+.social-links {
+    list-style: none;
+}
+
+.footer-site-navigation a:hover,
+.footer-site-navigation a:focus,
+.promo-link a:hover,
+.promo-link a:focus {
+    text-decoration: underline;
+}
+
+.footer-site-navigation a:active {
+    color: rgba(241, 245, 247, 0.5);
+    text-decoration: none;
+}
+
+.promo-link a:active {
+    color: rgba(255, 209, 128, 0.5);
+    text-decoration: none;
+}
+
+.promo-link a {
+    color: #ffd180;
+}
+
+.footer-links p {
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.footer-feedback a,
+.footer-copyright a {
+    color: #ffd180;
+}
+
+.footer-feedback a:hover,
+.footer-feedback a:focus,
+.footer-copyright a:hover,
+.footer-copyright a:focus {
+    text-decoration: underline;
+}
+
+.footer-feedback a:active,
+.footer-copyright a:active {
+    color: #ee3643;
+    text-decoration: none;
 }

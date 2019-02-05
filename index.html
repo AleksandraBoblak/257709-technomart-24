@@ -14,7 +14,7 @@
                 <img src="img/logo.png" width="220" height="47" alt="Логотип «Техномарта»">
             </a>
             <label>
-                <input type="search" class="search" name="search" value="" placeholder="Поиск" aria-label="Поиск по сайту">
+                <input type="search" class="search" name="search" value="" placeholder="Поиск:" aria-label="Поиск по сайту">
             </label>
             <a class="button bookmarks" href="bookmarks.html">Закладки: 0</a>
             <a class="button cart" href="cart.html">Корзина: 0</a>
@@ -218,7 +218,7 @@
                 Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
                 <ul class="services-menu">
                     <li class="services-menu-item">
-                        <button class="services-button delivery">Доставка</button>
+                        <button class="services-button delivery current">Доставка</button>
                     </li>
                     <li class="services-menu-item">
                         <button class="services-button quarantee">Гарантия</button>
@@ -257,7 +257,7 @@
             </section>
             <div class="columns">
                 <section class="main-aboutus">
-                    <h2>Компания «Техномарт»</h2>
+                    <h2 class="main-aboutus-title">Компания «Техномарт»</h2>
                     <p>
                         Настоящий мужской шоппинг начинается здесь! 
                         Огромный выбор товаров для ремонта и строительства не оставит равнодушным
@@ -267,18 +267,18 @@
                         Мы можем доставить ваш товар в самые отдаленные точки России! <br>
                         Техномарт работает со многими транспортными компаниями:
                     </p>
-                    <ul>
+                    <ul class="partners-list">
                         <li>Деловые линии</li>
                         <li>Автотрейдинг</li>
                         <li>ЖелДорЭкспедиция</li>
                     </ul>
-                    <a class="button" href="#">Подробнее о компании</a>
+                    <a class="button learn-more-button" href="#">Подробнее о компании</a>
                 </section>
                 <section class="main-contacts">
-                    <h2>Контакты</h2>
+                    <h2 class="main-contacts-title">Контакты</h2>
                     <p>Вы можете забрать товар сами,<br> заехав в наш офис:</p>
                     <img src="img/map.jpg" width="300" height="158" alt="Карта офиса по адресу ул. Б. Конюшенная, д. 19/8, Санкт-Петербург">
-                    <button class="main-feedback-button">Заблудились? Напишите нам</button>
+                    <button class="button main-feedback-button">Заблудились? Напишите нам</button>
                 </section>
             </div>
             <section class="modal modal-map">
@@ -303,7 +303,7 @@
                         <label for="feedback-text">Текст письма</label>
                         <textarea id="feedback-text" rows="10" name="text-field" placeholder="В свободной форме"></textarea>
                     </p>
-                    <button class="button" type="submit">Отправить</button>
+                    <button class="button feedback-form-button" type="submit">Отправить</button>
                     <button class="modal-close" type="button">Закрыть</button>
                 </form> 
             </section>
@@ -312,7 +312,7 @@
             <section class="footer-navigation">
                 <h2 class="visually-hidden">Навигация по сайту</h2>
                 <a class="footer-logo" href="#">
-                    <img src="img/logo.svg" width="80" height="24" alt="Логотип «Техномарта»">
+                    <img src="img/footer-logo.png" width="220" height="68" alt="Логотип «Техномарта»">
                 </a>
                 <div class="footer-contacts">
                     <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
@@ -339,7 +339,7 @@
                     Все права защищены
                 </p>
                 <div class="footer-social">
-                    <ul>
+                    <ul class="social-links">
                         <li><a class="social-button" href="#">«Техномарт» в Вконтакте</a></li>
                         <li><a class="social-button" href="#">«Техномарт» на Фейсбуке</a></li>
                         <li><a class="social-button" href="#">«Техномарт» в Инстаграме</a></li>
