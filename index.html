@@ -3,12 +3,15 @@
 <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
     <header class="header">
         <div class="header-top">
             <a class="header-logo" href="index.html">
-                <img src="img/logo.svg" width="111" height="24" alt="Логотип «Техномарта»">
+                <img src="img/logo.png" width="220" height="47" alt="Логотип «Техномарта»">
             </a>
             <label>
                 <input type="search" class="search" name="search" value="" placeholder="Поиск" aria-label="Поиск по сайту">
@@ -20,7 +23,7 @@
         <div class="header-middle">
             <h1 class="site-title">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
             <div class="header-contacts">
-                <a href="tel:+78125348628">+7(812)555-05-55</a>
+                <a href="tel:+78125348628" class="telephone">+7(812)555-05-55</a>
                 <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
             </div>
             <ul class="user-navigation">
@@ -49,32 +52,32 @@
                     <a class="button" href="materials.html">На любой вкус</a>
                     <p class="promo-item-new">new</p>
                 </li>
-                <li class="promo-item materials">
+                <li class="promo-item tool">
                     <h3 class="promo-item-title">Инструмент</h3>
                     <a class="button" href="tool.html">На все случаи</a>
                 </li>
-                <li class="promo-item materials">
+                <li class="promo-item machinery">
                     <h3 class="promo-item-title">Техника</h3>
                     <a class="button" href="machinery.html">Для стройки</a>
                 </li>
-                <li class="promo-item materials">
+                <li class="promo-item discount">
                     <h3 class="promo-item-title">Скидки 50&#37;</h3>
                     <a class="button" href="special-offer.html">На 350 товаров</a>
                 </li>
-                <li class="promo-item materials">
+                <li class="promo-item delivery">
                     <h3 class="promo-item-title">Доставка</h3>
                     <a class="button" href="delivery.html">Бесплатно</a>
                 </li>
             </ul>
             <ul class="slider">
                 <li class="slider-1">
-                    <p>Дрели</p>
-                    <p>Соседям на радость!</p>
+                    <p class="slider-title">Дрели</p>
+                    <p class="slider-slogan">Соседям на радость!</p>
                     <a class="button" href="technomart-catalog.psd">Открыть каталог</a>
                 </li>
                 <li class="slider-2">
-                    <p>Перфораторы</p>
-                    <p>Настоящие мужские игрушки</p>
+                    <p class="slider-title">Перфораторы</p>
+                    <p class="slider-slogan">Настоящие мужские игрушки</p>
                     <a class="button" href="technomart-catalog.psd">Открыть каталог</a>
                 </li>
             </ul>
@@ -82,7 +85,7 @@
             <button class="slider-button slider-button-right" type="button">Вправо</button>
         </section>
         <section class="popular-goods">
-            <h2>Популярные товары</h2>
+            <h2>Популярные товары:</h2>
             <a class="button" href="popular-goods.html">Все популярные товары</a>
             <ul class="catalog-list">
                 <li class="catalog-item">
@@ -164,9 +167,9 @@
             </ul>
         </section>
         <section class="brands-popular">
-            <h2>Популярные производители</h2>
+            <h2>Популярные производители:</h2>
             <a class="button" href="brands.html">Все производители</a>
-            <ul class="brands-icons">
+            <ul class="brands-icons-list">
                 <li class="brand-card">
                     <a href="#">
                         <img src="img/bosch.png" width="126" height="37" alt="BOSCH">
