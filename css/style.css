@@ -361,6 +361,7 @@ address {
     color: #ffffff;
     background-color: #32425c;
     font-weight: bold;
+    border: none;
 }
 
 .services-button:hover,
