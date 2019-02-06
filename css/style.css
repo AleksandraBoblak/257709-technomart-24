@@ -73,16 +73,16 @@ header,
     color: rgba(255, 255, 255, 0.6);
 }
 
-.button.order {
+a.order {
     background-color: #63a63e;
 }
 
-.button.order:hover,
-.button.order:focus {
+a.order:hover,
+a.order:focus {
     background-color: #5fbb2d;
 }
 
-.button.order:active {
+a.order:active {
     background-color: #518534;
     color: rgba(255, 255, 255, 0.5);
 }
@@ -232,6 +232,15 @@ address {
     background-color: #ba2732;
 }
 
+.button:hover,
+.button:focus {
+    background-color: #ca2c37;
+}
+
+.button:active {
+    background-color: #ba2732;
+}
+
 .popular-goods h2,
 .brands-popular h2 {
     font-family: Cuprum, Arial, sans-serif;;
@@ -243,8 +252,7 @@ address {
     text-transform: uppercase;
 }
 
-.brands-popular .button,
-.popular-goods .button,
+.button,
 .learn-more-button,
 .main-feedback-button,
 .feedback-form-button,
