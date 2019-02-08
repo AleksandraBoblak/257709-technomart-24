@@ -15,13 +15,13 @@ a {
     text-decoration: none;
 }
 
-header {
+.header {
     font-family: Cuprum, Arial, sans-serif;
     font-size: 17px;
     line-height: 18px;
 }
 
-header,
+.header,
 .services {
     background-color: #f4f7f9;
 }
@@ -33,13 +33,20 @@ header,
     background-color: #293449;
 }
 
-.header-logo:hover,
-.header-logo:focus {
-    filter: brightness(90%);
+.header-logo {
+    background-color: #ee3643;
 }
 
-.header-logo:active {
-    filter: brightness(80%);
+.header-logo:hover,
+.header-logo:focus,
+.footer-logo:hover,
+.footer-logo:focus {
+    background-color: #ca2c37;
+}
+
+.header-logo:active,
+.footer-logo:active {
+    background-color: #ba2732;
 }
 
 .search {
@@ -53,36 +60,48 @@ header,
     color: #ffffff;
 }
 
-.search:focus {
-    background-color: #ffffff;
-    color: #000000;
-}
-
-.header-top a:hover,
-.header-top a:focus,
+.header-link:hover,
+.header-link:focus,
 .search:hover,
 .site-navigation a:hover,
 .site-navigation a:focus {
     background-color: #212a3a;
 }
 
-.header-top a:active,
-.site-navigation a:active,
+.search:focus {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.header-link:active,
 .site-navigation a:active {
     background-color: #161d29;
     color: rgba(255, 255, 255, 0.6);
 }
 
-a.order {
+.cart-full {
+    background-color: #ee3643;
+}
+
+.cart-full:hover,
+.cart-full:focus {
+    background-color: #ca2c37;
+}
+
+.cart-full:active {
+    background-color: #ba2732;
+}
+
+.order {
     background-color: #63a63e;
 }
 
-a.order:hover,
-a.order:focus {
+.order:hover,
+.order:focus {
     background-color: #5fbb2d;
 }
 
-a.order:active {
+.order:active {
     background-color: #518534;
     color: rgba(255, 255, 255, 0.5);
 }
@@ -93,16 +112,18 @@ a.order:active {
 }
 
 .site-title {
-    font-family: Cuprum, Arial, sans-serif;;
+    font-family: Cuprum, Arial, sans-serif;
     font-size: 16px;
     font-weight: normal;
     font-style: italic;
+    color: #ee3643;
 }
 
 .telephone {
     text-align: center;
     font-size: 21px;
     line-height: 21px;
+    border: 2px solid #ffffff;
 }
 
 .header-top a,
@@ -134,16 +155,19 @@ a.order:active {
     color: rgba(0, 0, 0, 0.3);
 }
 
-address {
-    font-style: normal;
+.header-contacts {
     text-align: center;
+}
+
+.address {
+    font-style: normal;
     color: #32425c;
     font-size: 14px;
     line-height: 24px;
 }
 
 .button {
-    font-family: Cuprum, Arial, sans-serif;;
+    font-family: Cuprum, Arial, sans-serif;
     font-size: 14px;
     line-height: 18px;
     text-transform: uppercase;
@@ -151,7 +175,7 @@ address {
 }
 
 .promo {
-    font-family: Cuprum, Arial, sans-serif;;
+    font-family: Cuprum, Arial, sans-serif;
     color: #ffffff;
 }
 
@@ -165,7 +189,7 @@ address {
     background-color: #ffbf47;
 }
 
-.promo a {
+.promo-list a {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -241,22 +265,12 @@ address {
     background-color: #ba2732;
 }
 
-.popular-goods h2,
-.brands-popular h2 {
-    font-family: Cuprum, Arial, sans-serif;;
-    font-size: 30px;
-    line-height: 30px;
-    color: #32425c;
-    font-weight: normal;
+.popular-goods .title,
+.brands-popular .title {
     background-color: #f9f5f0;
-    text-transform: uppercase;
 }
 
-.button,
-.learn-more-button,
-.main-feedback-button,
-.feedback-form-button,
-.slider .button {
+.button {
     background-color: #ee3643;
     border: none;
 }
@@ -272,6 +286,7 @@ address {
 }
 
 .catalog-item-title {
+    font-family: PTSans, Arial, sans-serif;
     font-size: 18px;
     line-height: 20px;
     color: #000000;
@@ -281,9 +296,10 @@ address {
 .catalog-item-price {
     font-size: 17px;
     line-height: 18px;
+    font-weight: bold;
 }
 
-.old-price {
+.price-old {
     color: #a9a9a9;
     text-decoration: line-through;
 }
@@ -331,7 +347,7 @@ address {
 .brands-icons-list img:hover,
 .brands-icons-list img:focus {
     box-shadow: 0px 5px 25px 0px
-        rgba(41, 52, 73, 0.5);
+    rgba(41, 52, 73, 0.5);
 }
 
 .brands-icons-list img:active {
@@ -340,15 +356,20 @@ address {
     rgba(41, 52, 73, 0.5);
 }
 
-.services-title,
-.main-aboutus-title,
-.main-contacts-title {
+.title {
     font-family: Cuprum, Arial, sans-serif;
     font-size: 30px;
     line-height: 30px;
-    color: #000000;
     font-weight: normal;
     text-transform: uppercase;
+}
+
+.title-blue {
+    color: #32425c;
+}
+
+.title-black {
+    color: #000000;
 }
 
 .services-menu {
@@ -415,6 +436,10 @@ address {
     color: #ffffff;
 }
 
+.footer-logo {
+    background-color: #ee3643;
+}
+
 .footer-contacts > address,
 footer a,
 .footer-links {
@@ -429,7 +454,7 @@ footer a,
 
 .footer-site-navigation,
 .promo-link,
-.social-links {
+.footer-social ul {
     list-style: none;
 }
 
@@ -459,6 +484,10 @@ footer a,
     line-height: 18px;
 }
 
+.footer-social {
+    text-align: center;
+  }
+
 .footer-feedback a,
 .footer-copyright a {
     color: #ffd180;
@@ -475,4 +504,152 @@ footer a,
 .footer-copyright a:active {
     color: #ee3643;
     text-decoration: none;
+}
+
+.user-name {
+    font-family: Cuprum, Arial, sans-serif;
+    font-size: 21px;
+    line-height: 21px;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.user-name:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.profile-links {
+    list-style: none;
+    font-family: Cuprum, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.profile-links a {
+    color: #32425c;
+    text-decoration: underline;
+}
+
+.profile-links a:hover,
+.profile-links a:focus {
+    color: #ee3643;
+}
+
+.profile-links a:active {
+    color: rgba(50, 66, 92, 0.3);
+}
+
+.breadcrumbs {
+    list-style: none;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+
+.breadcrumbs a {
+    color: #000000;
+}
+
+.inner-page h1 {
+    background-color: #f2f6f8;
+}
+
+.filters {
+    text-transform: uppercase;
+}
+.filters-general-title,
+.sort-title {
+    font-family: PTSans, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #000000;
+}
+
+.filter-title {
+    font-size: 17px;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+.price-range::placeholder {
+    font-size: 17px;
+    line-height: 18px;
+    color: #000000;
+}
+
+.brands-list label,
+.power-source-list label {
+    list-style: none;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+fieldset {
+    border: none;
+}
+
+.sort-list {
+    list-style: none;
+    background-color: #f7f3ec;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.filters-general-title,
+.slider-bar,
+.price-range {
+    background-color: #f7f3ec;
+}
+
+.sort-button {
+    color: rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    border: none;
+    border-bottom: 1px dotted #ee3643;
+    background-color: #f7f3ec;
+}
+
+.sort-current .sort-button {
+    color: #ee3643;
+    border-bottom: none;
+}
+
+.sort-button:hover,
+.sort-button:focus {
+    color: #000000;
+    border-bottom: 1px solid #ee3643;
+}
+
+.sort-button:active {
+    color: #ee3643;
+    border-bottom: none;
+}
+
+
+.pagination-list {
+    list-style: none;
+}
+
+.pagination-item a {
+    line-height: 18px;
+    text-transform: uppercase;
+    color: #000000;
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+}
+
+.pagination-item-current a {
+    color: #ffffff;
+    background-color: #ee3643;
+}
+
+.pagination-item a:hover,
+.pagination-item a:focus {
+    border-color: #bdc6ca;
+}
+.pagination-item a:active {
+    border-color: #ee3643;
+}
+
+.about-perforators {
+    background-color: #f4f7f9;
 }

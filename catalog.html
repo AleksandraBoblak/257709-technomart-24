@@ -7,24 +7,24 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
-<body>
+<body class="inner-page">
     <header class="header">
         <div class="header-top">
             <a class="header-logo" href="index.html">
-                <img src="img/logo.png" width="220" height="47" alt="Логотип «Техномарта»">
+                <img src="img/logo.png" width="110" height="18" alt="Логотип «Техномарта»">
             </a>
             <label>
                 <input type="search" class="search" name="search" value="" placeholder="Поиск" aria-label="Поиск по сайту">
             </label>
-            <a class="button bookmarks" href="bookmarks.html">Закладки: 0</a>
-            <a class="button cart button-red" href="cart.html">Корзина: 10</a>
-            <a class="button order" href="order.html">Оформить заказ</a>
+            <a class="header-link bookmarks" href="bookmarks.html">Закладки: 0</a>
+            <a class="header-link cart-full" href="cart.html">Корзина: 10</a>
+            <a class="order" href="order.html">Оформить заказ</a>
         </div>
         <div class="header-middle">
             <p class="site-title">Интернет-магазин строительных материалов и инструментов для ремонта</p>
             <div class="header-contacts">
                 <a href="tel:+78125348628" class="telephone">+7(812)555-05-55</a>
-                <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+                <address class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
             </div>
             <div class="profile">
                 <a class="user-name" href="profile.html">Равшан Джамшутович</a>
@@ -54,10 +54,10 @@
             <li><a href="tool.html">Инструмент</a></li>
             <li class="breadcrumbs-current">Перфораторы</li>
         </ul>
-        <h1>Перфораторы</h1>
+        <h1 class="title title-blue">Перфораторы</h1>
         <section class="filters">
-            <h2>Фильтр:</h2>
-            <h3 class="filters-title">Цена</h3>
+            <h2 class="title filters-general-title">Фильтр:</h2>
+            <h3 class="filter-title">Цена</h3>
             <form class="filter-form" method="get" action="https://echo.htmlacademy.ru">
                 <div class="slider-bar">
                     <div class="slider-bar-line"></div>
@@ -69,8 +69,8 @@
                 <label for="filter-price-max">Максимальная цена</label>
                 <input id="filter-price-max" type="number" class="price-range price-max" placeholder="30000" name="max-price" min="0">
                 <fieldset>
-                    <legend>Производители:</legend>
-                    <ul class="brands">
+                    <legend class="filter-title">Производители:</legend>
+                    <ul class="brands-list">
                         <li class="filter-option">
                             <label>
                                 <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" value="BOCSH" name="brands[]" checked>
@@ -100,8 +100,8 @@
                     </ul>
                 </fieldset>
                 <fieldset>
-                    <legend class="filters-title">Питание:</legend>
-                    <ul class="power-source">
+                    <legend class="filter-title">Питание:</legend>
+                    <ul class="power-source-list">
                         <li class="filter-option">
                             <label>
                                 <input class="visually-hidden filter-input filter-input-radio" 
@@ -126,7 +126,7 @@
             <button class="modal-close" type="button">Закрыть</button>
         </section>
         <section class="catalog">
-            <h2 class="sort">Сортировка:</h2>
+            <h2 class="title sort-title">Сортировка:</h2>
             <ul class="sort-list">
                 <li class="sort-current"><button class="sort-button">По цене</button></li>
                 <li><button class="sort-button">По типу</button></li>
@@ -151,7 +151,7 @@
                         <button class="button add-to-bookmarks">В закладки</button>
                     </p>
                     <p class="catalog-item-price">
-                        <span class="old-price">22500</span>
+                        <span class="price-old">22500 Р.</span>
                         <span class="price">15500 Р.</span>
                     </p>
                 </li>
@@ -170,7 +170,7 @@
                         <button class="button add-to-bookmarks">В закладки</button>
                     </p>
                     <p class="catalog-item-price">
-                        <span class="price-old">30500</span>
+                        <span class="price-old">30500 Р.</span>
                         <span class="price">25500 Р.</span>
                     </p>
                 </li>
@@ -208,7 +208,7 @@
                         <button class="button add-to-bookmarks">В закладки</button>
                     </p>
                     <p class="catalog-item-price">
-                        <span class="price-old">22500</span>
+                        <span class="price-old">22500 Р.</span>
                         <span class="price">15500 Р.</span>
                     </p>
                 </li>
@@ -227,7 +227,7 @@
                         <button class="button add-to-bookmarks">В закладки</button>
                     </p>
                     <p class="catalog-item-price">
-                        <span class="price-old">30500</span>
+                        <span class="price-old">30500 Р.</span>
                         <span class="price">25500 Р.</span>
                     </p>
                     <p class="catalog-item-new">new</p>
@@ -265,7 +265,7 @@
                         <button class="button add-to-bookmarks">В закладки</button>
                     </p>
                     <p class="catalog-item-price">
-                        <span class="price-old">22500</span>
+                        <span class="price-old">22500 Р.</span>
                         <span class="price">15500 Р.</span>
                     </p>
                     <p class="catalog-item-new">new</p>
@@ -285,7 +285,7 @@
                         <button class="button add-to-bookmarks">В закладки</button>
                     </p>
                     <p class="catalog-item-price">
-                        <span class="price-old">30500</span>
+                        <span class="price-old">30500 Р.</span>
                         <span class="price">25500 Р.</span>
                     </p>
                 </li>
@@ -316,7 +316,7 @@
             </ul>
         </section>
         <div class="about-perforators">
-            <h2 class="about-perforators-title">Пара слов о перфораторах</h2>
+            <h2 class="title title-black">Пара слов о перфораторах</h2>
             <p class="about-perforators-info">
                 Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
                 Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. 
@@ -328,10 +328,10 @@
         <section class="footer-navigation">
             <h2 class="visually-hidden">Навигация по сайту</h2>
             <a class="footer-logo" href="index.html">
-                <img src="img/logo.svg" width="80" height="24" alt="Логотип «Техномарта»">
+                <img src="img/logo.png" width="138" height="23" alt="Логотип «Техномарта»">
             </a>
             <div class="footer-contacts">
-                <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+                <address class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
                 <a href="tel:+78125348628">+7(812)555-05-55</a>
             </div>
             <ul class="footer-site-navigation">
