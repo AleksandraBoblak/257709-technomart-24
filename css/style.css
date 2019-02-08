@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     
-    font-family: PTSans, Arial, sans-serif;
+    font-family: "PT Sans", Arial, sans-serif;
     font-size: 13px;
     line-height: 24px;
     font-weight: normal;
@@ -277,7 +277,7 @@ a {
 
 .brands-popular,
 .popular-goods {
-    font-family: "PTSans";
+    font-family: "PT Sans", Arial, sans-serif;
 }
 
 .catalog-list,
@@ -286,7 +286,7 @@ a {
 }
 
 .catalog-item-title {
-    font-family: PTSans, Arial, sans-serif;
+    font-family: "PT Sans", Arial, sans-serif;
     font-size: 18px;
     line-height: 20px;
     color: #000000;
@@ -426,7 +426,7 @@ a {
 }
 
 ::placeholder {
-    font-family: PTSans, Arial, sans-serif;
+    font-family: "PT Sans", Arial, sans-serif;
     font-size: 13px;
     line-height: 18px;
 }
@@ -441,7 +441,7 @@ a {
 }
 
 .footer-contacts > address,
-footer a,
+.main-footer a,
 .footer-links {
     color: #ffffff;
     font-family: Cuprum, Arial, sans-serif;
@@ -558,7 +558,7 @@ footer a,
 }
 .filters-general-title,
 .sort-title {
-    font-family: PTSans, Arial, sans-serif;
+    font-family: "PT Sans", Arial, sans-serif;
     font-size: 13px;
     line-height: 18px;
     color: #000000;
@@ -576,6 +576,11 @@ footer a,
     color: #000000;
 }
 
+.brands-list,
+.power-source-list  {
+    list-style: none;
+}
+
 .brands-list label,
 .power-source-list label {
     list-style: none;
@@ -583,7 +588,7 @@ footer a,
     line-height: 20px;
 }
 
-fieldset {
+.filters-field {
     border: none;
 }
 
@@ -623,7 +628,6 @@ fieldset {
     color: #ee3643;
     border-bottom: none;
 }
-
 
 .pagination-list {
     list-style: none;

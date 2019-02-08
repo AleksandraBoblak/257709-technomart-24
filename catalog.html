@@ -57,18 +57,20 @@
         <h1 class="title title-blue">Перфораторы</h1>
         <section class="filters">
             <h2 class="title filters-general-title">Фильтр:</h2>
-            <h3 class="filter-title">Цена</h3>
             <form class="filter-form" method="get" action="https://echo.htmlacademy.ru">
-                <div class="slider-bar">
-                    <div class="slider-bar-line"></div>
-                    <div class="slider-bar-min"></div>
-                    <div class="slider-bar-max"></div>
-                </div>
-                <label for="filter-price-min">Минимальная цена</label>
-                <input id="filter-price-min" type="number" class="price-range price-min" placeholder="0" name="min-price" min="0">
-                <label for="filter-price-max">Максимальная цена</label>
-                <input id="filter-price-max" type="number" class="price-range price-max" placeholder="30000" name="max-price" min="0">
-                <fieldset>
+                <fieldset class="filters-field">
+                    <legend class="filter-title">Цена:</legend>
+                    <div class="slider-bar">
+                        <div class="slider-bar-line"></div>
+                        <div class="slider-bar-min"></div>
+                        <div class="slider-bar-max"></div>
+                    </div>
+                    <label for="filter-price-min">Минимальная цена</label>
+                    <input id="filter-price-min" type="number" class="price-range price-min" placeholder="0" name="min-price" min="0">
+                    <label for="filter-price-max">Максимальная цена</label>
+                    <input id="filter-price-max" type="number" class="price-range price-max" placeholder="30000" name="max-price" min="0">
+                </fieldset>
+                <fieldset class="filters-field">
                     <legend class="filter-title">Производители:</legend>
                     <ul class="brands-list">
                         <li class="filter-option">
@@ -99,7 +101,7 @@
                         </li>
                     </ul>
                 </fieldset>
-                <fieldset>
+                <fieldset class="filters-field">
                     <legend class="filter-title">Питание:</legend>
                     <ul class="power-source-list">
                         <li class="filter-option">
