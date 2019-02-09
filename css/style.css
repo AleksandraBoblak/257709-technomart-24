@@ -35,6 +35,7 @@ a {
 
 .header-logo {
     background-color: #ee3643;
+    padding: 12px 55px;
 }
 
 .header-logo:hover,
@@ -115,8 +116,10 @@ a {
     font-family: Cuprum, Arial, sans-serif;
     font-size: 16px;
     font-weight: normal;
+    line-height: 23px;
     font-style: italic;
     color: #ee3643;
+    margin: 0;
 }
 
 .telephone {
@@ -137,6 +140,8 @@ a {
 .services-list,
 .slider {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .user-navigation a {
@@ -265,8 +270,7 @@ a {
     background-color: #ba2732;
 }
 
-.popular-goods .title,
-.brands-popular .title {
+.popular-wrapper {
     background-color: #f9f5f0;
 }
 
@@ -283,6 +287,8 @@ a {
 .catalog-list,
 .services-menu {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .catalog-item-title {
@@ -297,6 +303,7 @@ a {
     font-size: 17px;
     line-height: 18px;
     font-weight: bold;
+    text-align: center;
 }
 
 .price-old {
@@ -311,6 +318,8 @@ a {
 
 .brands-icons-list {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .button.buy {
@@ -344,13 +353,13 @@ a {
     color: rgba(50, 66, 92, 0.3);
 }
 
-.brands-icons-list img:hover,
-.brands-icons-list img:focus {
+.brand-card:hover,
+.brand-card:focus {
     box-shadow: 0px 5px 25px 0px
     rgba(41, 52, 73, 0.5);
 }
 
-.brands-icons-list img:active {
+.brand-card:active {
     filter: opacity(0.3);
     box-shadow: 0px 5px 10px 0px
     rgba(41, 52, 73, 0.5);
@@ -410,7 +419,8 @@ a {
 }
 
 .partners-list {
-    font-weight: 18px;
+    font-family: Cuprum, Arial, sans-serif;
+    font-size: 18px;
     line-height: 20px;
     list-style: none;
 }
@@ -438,6 +448,7 @@ a {
 
 .footer-logo {
     background-color: #ee3643;
+    padding: 20px 40px;
 }
 
 .footer-contacts > address,
@@ -486,7 +497,7 @@ a {
 
 .footer-social {
     text-align: center;
-  }
+}
 
 .footer-feedback a,
 .footer-copyright a {
@@ -656,4 +667,279 @@ a {
 
 .about-perforators {
     background-color: #f4f7f9;
+}
+
+/****************** Layout ******************/
+
+.header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 60px;
+    padding-bottom: 60px;
+}
+
+.header-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.header-top-wrapper {
+    width: 940px;
+    display: flex;
+}
+
+.header-middle {
+    display: flex;
+    width: 940px;
+}
+
+.header-column {
+    width: 300px;
+    padding: 45px 20px;
+}
+
+.header-bottom {
+    display: flex;
+    width: 940px;
+}
+
+.site-navigation {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.site-navigation a {
+    display: block;
+    padding: 20px;
+}
+
+.container {
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+.promo {
+    margin-bottom: 50px;
+}
+
+.catalog-list {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+
+.catalog-item-link {
+    display: flex;
+    flex-direction: column;
+}
+
+.catalog-item-title {
+    order: 2;
+}
+
+.catalog-item {
+    width: 220px;
+    border: 1px solid #eaeaea;
+}
+
+.catalog-item-actions {
+    text-align: center;
+}
+
+.popular-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center;
+    padding: 25px;
+}
+
+.popular-goods {
+    margin-bottom: 20px;
+}
+
+.brands-icons-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.brand-card {
+    display: flex;
+    width: 220px;
+    min-height: 145px;
+    border: 1px solid #eaeaea;
+    margin-bottom: 20px;
+}
+
+.brand-card a {
+    display: flex;
+    width: 100%;
+}
+
+.brand-card img {
+    margin: auto;
+}
+
+.services {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+.services-wrapper {
+    width: 940px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 10px;
+}
+
+.services-intro {
+    width: 400px;
+    margin-bottom: 75px;
+}
+
+.services-button {
+    width: 240px;
+    text-align: left;
+    padding: 15px 20px;
+}
+
+.services-item {
+    width: 275px;
+}
+
+.services-columns {
+    display: flex;
+}
+
+.services-column-1 {
+    margin-right: 80px;
+}
+
+.services-column-2 {
+    width: 300px;
+}
+
+.services-item-title {
+    margin: 0;
+    padding-bottom: 28px;
+}
+
+.services-item-description {
+    margin-top: 0;
+}
+
+.columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-aboutus,
+.main-contacts {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-aboutus {
+    width: 520px;
+}
+
+.main-contacts {
+    width: 300px;
+}
+
+.learn-more-button {
+    width: 200px;
+}
+
+.learn-more-button,
+.main-feedback-button {
+    padding: 10px;
+    text-align: center;
+}
+
+.map-preview {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.title {
+    margin: 5px;
+    margin-left: 0;
+}
+
+.main-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.footer-navigation-top {
+    display: flex;
+    align-items: center;
+}
+
+.footer-navigation-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-links-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social-links {
+    margin: 0;
+    padding: 0;
+}
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+  }
+
+  .footer-site-navigation {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+.footer-site-navigation li,
+.promo-link li {
+    padding: 0 30px;
+}
+
+.promo-link {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: flex-end;
+    flex-grow: 1
+}
+
+.footer-contacts {
+    width: 380px;
 }
