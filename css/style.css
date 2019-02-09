@@ -502,6 +502,7 @@ a {
 .footer-feedback a,
 .footer-copyright a {
     color: #ffd180;
+    font-size: 16px;
 }
 
 .footer-feedback a:hover,
@@ -605,9 +606,10 @@ a {
 
 .sort-list {
     list-style: none;
-    background-color: #f7f3ec;
     font-size: 13px;
     line-height: 18px;
+    padding: 0;
+    margin: 0;
 }
 
 .filters-general-title,
@@ -642,6 +644,8 @@ a {
 
 .pagination-list {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .pagination-item a {
@@ -730,9 +734,10 @@ a {
 
 .catalog-list {
     display: flex;
-    justify-content: space-between;
     padding: 0;
     margin: 0;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .catalog-item-link {
@@ -747,6 +752,19 @@ a {
 .catalog-item {
     width: 220px;
     border: 1px solid #eaeaea;
+    margin-bottom: 20px;
+}
+
+.inner-page .catalog-list {
+    justify-content: flex-end;
+}
+
+.inner-page .catalog-item {
+    margin-right: 20px;
+}
+
+.inner-page .catalog-item:nth-child(3n) {
+    margin-right: 0px;
 }
 
 .catalog-item-actions {
@@ -873,8 +891,8 @@ a {
 }
 
 .title {
-    margin: 5px;
-    margin-left: 0;
+    margin: 0;
+    padding: 5px;
 }
 
 .main-footer {
@@ -942,4 +960,66 @@ a {
 
 .footer-contacts {
     width: 380px;
+}
+
+/****************** Catalog Layout ******************/
+
+.breadcrumbs {
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.breadcrumbs li {
+    padding: 20px;
+}
+
+h1.title {
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+.inner-columns-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.inner-column-1 {
+    width: 220px;
+    margin-right: 20px;
+}
+
+.sort-wrapper {
+    display: flex;
+    background-color: #f7f3ec;
+    align-items: center;
+    padding: 8px 20px;
+    margin-bottom: 20px;
+}
+
+.sort-list {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.catalog-list {
+    margin-bottom: 50px;
+}
+
+.about-perforators-info {
+    margin: 0;
+}
+
+.about-perforators .container {
+    padding: 66px;
+}
+
+.perforators-title {
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.about-perforators-info p {
+    margin: 0;
 }
