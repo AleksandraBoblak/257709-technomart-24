@@ -107,7 +107,6 @@ a {
     color: rgba(255, 255, 255, 0.5);
 }
 
-.header-middle > h1, 
 .telephone {
     color: #ee3643;
 }
@@ -272,23 +271,22 @@ a {
 
 .popular-wrapper {
     background-color: #f9f5f0;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+.popular-button {
+    line-height: 40px;
+    width: 253px;
+    text-align: center;
 }
 
 .button {
     background-color: #ee3643;
     border: none;
-}
-
-.brands-popular,
-.popular-goods {
-    font-family: "PT Sans", Arial, sans-serif;
-}
-
-.catalog-list,
-.services-menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
 }
 
 .catalog-item-title {
@@ -297,6 +295,7 @@ a {
     line-height: 20px;
     color: #000000;
     font-weight: bold;
+    order: 2;
 }
 
 .catalog-item-price {
@@ -371,6 +370,8 @@ a {
     line-height: 30px;
     font-weight: normal;
     text-transform: uppercase;
+    margin: 0;
+    padding: 5px;
 }
 
 .title-blue {
@@ -383,6 +384,9 @@ a {
 
 .services-menu {
     font-family:  Cuprum, Arial, sans-serif;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .services-button {
@@ -416,6 +420,8 @@ a {
     text-transform: uppercase;
     font-weight: normal;
     color: #32425c;
+    margin: 0;
+    padding-bottom: 28px;
 }
 
 .partners-list {
@@ -429,10 +435,6 @@ a {
     font-family: Cuprum, Arial, sans-serif;
     font-size: 18px;
     line-height: 18px;
-}
-
-.feedback-item {
-    line-height: 24px;
 }
 
 ::placeholder {
@@ -451,7 +453,7 @@ a {
     padding: 20px 40px;
 }
 
-.footer-contacts > address,
+.footer-contacts .address,
 .main-footer a,
 .footer-links {
     color: #ffffff;
@@ -461,6 +463,7 @@ a {
 
 .footer-links {
     background-color: #293449;
+    padding-top: 38px;
 }
 
 .footer-site-navigation,
@@ -559,10 +562,6 @@ a {
 
 .breadcrumbs a {
     color: #000000;
-}
-
-.inner-page h1 {
-    background-color: #f2f6f8;
 }
 
 .filters {
@@ -734,10 +733,12 @@ a {
 
 .catalog-list {
     display: flex;
+    list-style: none;
     padding: 0;
     margin: 0;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: 50px;
 }
 
 .catalog-item-link {
@@ -745,38 +746,33 @@ a {
     flex-direction: column;
 }
 
-.catalog-item-title {
-    order: 2;
-}
-
 .catalog-item {
     width: 220px;
     border: 1px solid #eaeaea;
     margin-bottom: 20px;
-}
-
-.inner-page .catalog-list {
-    justify-content: flex-end;
+    box-sizing: border-box;
 }
 
 .inner-page .catalog-item {
-    margin-right: 20px;
-}
-
-.inner-page .catalog-item:nth-child(3n) {
-    margin-right: 0px;
+    margin-bottom: 20px;
 }
 
 .catalog-item-actions {
     text-align: center;
 }
 
-.popular-wrapper {
-    display: flex;
+.inner-page .catalog-list {
+    justify-content: flex-start;
+}
+
+.inner-page .catalog-item {
     justify-content: space-between;
-    margin-bottom: 20px;
     align-items: center;
-    padding: 25px;
+    margin-right: 20px;
+}
+
+.inner-page .catalog-item:nth-child(3n) {
+    margin-right: 0px;
 }
 
 .popular-goods {
@@ -847,11 +843,6 @@ a {
     width: 300px;
 }
 
-.services-item-title {
-    margin: 0;
-    padding-bottom: 28px;
-}
-
 .services-item-description {
     margin-top: 0;
 }
@@ -890,11 +881,6 @@ a {
     margin-bottom: 40px;
 }
 
-.title {
-    margin: 0;
-    padding: 5px;
-}
-
 .main-footer {
     display: flex;
     flex-direction: column;
@@ -910,6 +896,8 @@ a {
 .footer-navigation-top {
     display: flex;
     align-items: center;
+    margin-bottom: 30px;
+    justify-content: flex-end;
 }
 
 .footer-navigation-bottom {
@@ -940,26 +928,28 @@ a {
     display: flex;
     margin: 0;
     padding: 0;
+    padding-top: 40px;
     justify-content: flex-end;
     flex-grow: 1;
 }
 
 .footer-site-navigation li,
 .promo-link li {
-    padding: 0 30px;
+    margin-left: 60px;
 }
 
 .promo-link {
     display: flex;
     margin: 0;
     padding: 0;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-end;
     flex-grow: 1
 }
 
 .footer-contacts {
-    width: 380px;
+    width: 330px;
+    flex-shrink: 0;
 }
 
 /****************** Catalog Layout ******************/
@@ -974,7 +964,8 @@ a {
     padding: 20px;
 }
 
-h1.title {
+.inner-title {
+    background-color: #f2f6f8;
     padding: 30px;
     margin-bottom: 20px;
 }
@@ -988,6 +979,11 @@ h1.title {
 .inner-column-1 {
     width: 220px;
     margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.inner-column-2 {
+    width:
 }
 
 .sort-wrapper {
@@ -1000,11 +996,7 @@ h1.title {
 
 .sort-list {
     display: flex;
-    justify-content: flex-end;
-}
-
-.catalog-list {
-    margin-bottom: 50px;
+    justify-content: space-between;
 }
 
 .about-perforators-info {
