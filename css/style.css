@@ -753,10 +753,6 @@ a {
     box-sizing: border-box;
 }
 
-.inner-page .catalog-item {
-    margin-bottom: 20px;
-}
-
 .catalog-item-actions {
     text-align: center;
 }
@@ -769,6 +765,7 @@ a {
     justify-content: space-between;
     align-items: center;
     margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 .inner-page .catalog-item:nth-child(3n) {
@@ -980,10 +977,6 @@ a {
     width: 220px;
     margin-right: 20px;
     flex-shrink: 0;
-}
-
-.inner-column-2 {
-    width:
 }
 
 .sort-wrapper {
