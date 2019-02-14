@@ -10,11 +10,11 @@
 <body>
     <header class="header">
         <div class="header-top">
-            <div class="header-top-wrapper">
+            <div class="header-top-wrapper container">
                 <a class="header-logo" href="index.html">
                     <img src="img/logo.png" width="110" height="18" alt="Логотип «Техномарта»">
                 </a>
-                <label>
+                <label class="search-label">
                     <input type="search" class="search" name="search" value="" placeholder="Поиск:" aria-label="Поиск по сайту">
                 </label>
                 <a class="header-link bookmarks" href="bookmarks.html">Закладки: 0</a>
@@ -23,70 +23,80 @@
             </div>
         </div>
         <div class="header-middle">
-            <div class="header-column">
+            <div class="header-column header-title">
                 <h1 class="site-title">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
             </div>
-            <div class="header-contacts header-column">
-                <a href="tel:+78125348628" class="telephone">+7(812)555-05-55</a>
+            <div class="header-column header-contacts">
+                <a href="tel:+78125348628" class="telephone">+7 (812) 555-05-55</a>
                 <address class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
             </div>
-            <ul class="user-navigation header-column">
+            <ul class="header-column user-navigation">
                 <li class="login-link"><a href="login.html">Войти</a></li>
                 <li class="signin-link"><a href="signin.html">Регистрация</a></li>
             </ul>
         </div>
-        <nav class="header-bottom">
+        <nav class="header-bottom container">
             <ul class="site-navigation">
-                <li class="site-navigation-current"><a>Главная</a></li>
-                <li><a href="about-us.html">Компания</a></li>
-                <li><a href="catalog.html">Каталог</a></li>
-                <li><a href="news.html">Новости</a></li>
-                <li><a href="special-offer.html">Спецпредложения</a></li>
-                <li><a href="delivery.html">Доставка</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
+                <li class="site-navigation-item site-navigation-current"><a>Главная</a></li>
+                <li class="site-navigation-item"><a href="about-us.html">Компания</a></li>
+                <li class="site-navigation-item"><a href="catalog.html">Каталог</a></li>
+                <li class="site-navigation-item"><a href="news.html">Новости</a></li>
+                <li class="site-navigation-item"><a href="special-offer.html">Спецпредложения</a></li>
+                <li class="site-navigation-item"><a href="delivery.html">Доставка</a></li>
+                <li class="site-navigation-item"><a href="contacts.html">Контакты</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="promo container">
-            <h2 class="visually-hidden">Промо</h2>
-            <ul class="promo-list">
-                <li class="promo-item materials">
-                    <h3 class="promo-item-title">Материалы</h3>
-                    <a class="button" href="materials.html">На любой вкус</a>
-                    <p class="promo-item-new">new</p>
-                </li>
-                <li class="promo-item tool">
-                    <h3 class="promo-item-title">Инструмент</h3>
-                    <a class="button" href="tool.html">На все случаи</a>
-                </li>
-                <li class="promo-item machinery">
-                    <h3 class="promo-item-title">Техника</h3>
-                    <a class="button" href="machinery.html">Для стройки</a>
-                </li>
-                <li class="promo-item discount">
-                    <h3 class="promo-item-title">Скидки 50&#37;</h3>
-                    <a class="button" href="special-offer.html">На 350 товаров</a>
-                </li>
-                <li class="promo-item delivery">
-                    <h3 class="promo-item-title">Доставка</h3>
-                    <a class="button" href="delivery.html">Бесплатно</a>
-                </li>
-            </ul>
-            <ul class="slider">
-                <li class="slider-1">
-                    <p class="slider-title">Дрели</p>
-                    <p class="slider-slogan">Соседям на радость!</p>
-                    <a class="button" href="technomart-catalog.psd">Открыть каталог</a>
-                </li>
-                <li class="slider-2">
-                    <p class="slider-title">Перфораторы</p>
-                    <p class="slider-slogan">Настоящие мужские игрушки</p>
-                    <a class="button" href="technomart-catalog.psd">Открыть каталог</a>
-                </li>
-            </ul>
-            <button class="slider-button slider-button-left" type="button">Влево</button>
-            <button class="slider-button slider-button-right" type="button">Вправо</button>
+        <section class="promo">
+            <div class="container">
+                <div class="promo-column promo-column-1">
+                    <h2 class="visually-hidden">Промо</h2>
+                    <ul class="promo-list">
+                        <li class="promo-item materials">
+                            <h3 class="promo-item-title">Материалы</h3>
+                            <a class="button promo-button" href="materials.html">На любой вкус</a>
+                            <p class="promo-item-new">new</p>
+                        </li>
+                        <li class="promo-item tool">
+                            <h3 class="promo-item-title">Инструмент</h3>
+                            <a class="button promo-button" href="tool.html">На все случаи</a>
+                        </li>
+                        <li class="promo-item machinery">
+                            <h3 class="promo-item-title">Техника</h3>
+                            <a class="button promo-button" href="machinery.html">Для стройки</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="promo-column promo-column-2">
+                    <ul class="promo-list">
+                        <li class="promo-item discount">
+                            <h3 class="promo-item-title">Скидки 50&#37;</h3>
+                            <a class="button promo-button" href="special-offer.html">На 350 товаров</a>
+                        </li>
+                        <li class="promo-item promo-delivery">
+                            <h3 class="promo-item-title">Доставка</h3>
+                            <a class="button promo-button" href="delivery.html">Бесплатно</a>
+                        </li>
+                    </ul>
+                    <div class="slider-wrapper">
+                        <ul class="slider">
+                            <li class="slider-1">
+                                <p class="slider-title">Дрели</p>
+                                <p class="slider-slogan">Соседям на радость!</p>
+                                <a class="button slider-button" href="technomart-catalog.psd">Открыть каталог</a>
+                            </li>
+                            <li class="slider-2">
+                                <p class="slider-title">Перфораторы</p>
+                                <p class="slider-slogan">Настоящие мужские игрушки</p>
+                                <a class="button slider-button" href="technomart-catalog.psd">Открыть каталог</a>
+                            </li>
+                        </ul>
+                        <button class="slider-arrow slider-arrow-left" type="button">Влево</button>
+                        <button class="slider-arrow slider-arrow-right" type="button">Вправо</button>
+                    </div>
+                </div>
+            </div>
         </section>
         <section class="popular-goods container">
             <div class="popular-wrapper">
@@ -230,7 +240,7 @@
                     <div class="services-column-1">
                         <ul class="services-menu">
                             <li class="services-menu-item">
-                                <button class="services-button delivery current">Доставка</button>
+                                <button class="services-button services-delivery current">Доставка</button>
                             </li>
                             <li class="services-menu-item">
                                 <button class="services-button guarantee">Гарантия</button>
@@ -242,7 +252,7 @@
                     </div>
                     <div class="services-column-2">
                         <ul class="services-list">
-                            <li class="services-item">
+                            <li class="services-item delivery">
                                 <h3 class="services-item-title">Доставка</h3>
                                 <p class="services-item-description">
                                     Мы с удовольствием доставим ваш товар прямо 
@@ -251,7 +261,7 @@
                                     поднимая его на ваш этаж!
                                 </p>
                             </li>
-                            <li class="services-item">
+                            <li class="services-item guarantee">
                                 <h3 class="services-item-title">Гарантия</h3>
                                 <p class="services-item-description">
                                     Если купленный у нас товар поломается или заискрит, 
@@ -260,7 +270,7 @@
                                     Дом уж восстановите как-нибудь сами.
                                 </p>
                             </li>
-                            <li class="services-item">
+                            <li class="services-item credit">
                                 <h3 class="services-item-title">Кредит</h3>
                                 <p class="services-item-description">
                                     Залезть в долговую яму стало проще! <br>
@@ -364,9 +374,21 @@
                 </p>
                 <div class="footer-social">
                     <ul class="social-links">
-                        <li><a class="social-button" href="#">«Техномарт» в Вконтакте</a></li>
-                        <li><a class="social-button" href="#">«Техномарт» на Фейсбуке</a></li>
-                        <li><a class="social-button" href="#">«Техномарт» в Инстаграме</a></li>
+                        <li>
+                            <a class="social-button button-vk" href="#">
+                                <span class="visually-hidden">«Техномарт» в Вконтакте</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="social-button button-fb" href="#">
+                                <span class="visually-hidden">«Техномарт» на Фейсбуке</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="social-button button-instagram" href="#">
+                                <span class="visually-hidden">«Техномарт» в Инстаграме</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <p class="footer-feedback">
