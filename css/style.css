@@ -133,6 +133,7 @@ a {
     color: #ee3643;
     border: 3px solid #ffffff;
     padding: 10px;
+    padding-left: 21px;
     margin-bottom: 5px;
     background-image: url("../img/icon-phone.svg");
     background-repeat: no-repeat;
@@ -399,9 +400,9 @@ a {
     background-color: #f9f5f0;
     display: flex;
     justify-content: space-between;
-    align-content: center;
+    align-items: center;
     padding: 25px;
-    margin-bottom: 20px;
+    margin-bottom: 19px;
 }
 
 .popular-button {
@@ -418,6 +419,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow: hidden;
 }
 
 .catalog-item-title {
@@ -429,7 +431,7 @@ a {
     order: 2;
     text-align: center;
     margin: 0 30px;
-    margin-bottom: 15px;
+    margin-bottom: 11px;
 }
 
 .catalog-brand {
@@ -455,8 +457,8 @@ a {
     display: block;
     color: #ffffff;
     background-color: #ee3643;
-    padding: 10px 20px;
-    padding-right: 0;
+    padding: 10px 21px;
+    padding-right: 5px;
     margin: 0 40px;
     position: relative;
     width: 98px;
@@ -532,7 +534,6 @@ a {
     font-weight: normal;
     text-transform: uppercase;
     margin: 0;
-    padding: 5px;
 }
 
 .title-blue {
@@ -592,7 +593,8 @@ a {
     line-height: 20px;
     list-style: none;
     margin: 0;
-    padding-top: 20px;
+    padding-top: 21px;
+    padding-left: 38px;
     margin-bottom: 20px;
 }
 
@@ -820,11 +822,20 @@ a {
     color: #000000;
     background-color: #ffffff;
     border: 1px solid #e5e5e5;
+    border-radius: 2px;
+    display: block;
+    padding: 10px 15px;
 }
 
 .pagination-item-current a {
     color: #ffffff;
     background-color: #ee3643;
+    border: 1px solid #ee3643;
+    border-radius: 2px;
+}
+
+.pagination-item-next a {
+    padding: 10px 30px;
 }
 
 .pagination-item a:hover,
@@ -833,6 +844,14 @@ a {
 }
 .pagination-item a:active {
     border-color: #ee3643;
+}
+
+.pagination-item {
+    margin-right: 8px;
+}
+
+.pagination-item:last-child {
+    margin-right: 0;
 }
 
 .about-perforators {
@@ -871,11 +890,11 @@ a {
 .header-column {
     width: 280px;
     padding: 45px 0px;
-    margin-left: 30px;
+    margin-left: 20px;
 }
 
 .header-title {
-    padding-left: 25px;
+    padding-left: 35px;
     width: 240px;
     box-sizing: border-box;
 }
@@ -922,6 +941,7 @@ a {
     list-style: none;
     padding: 0;
     margin: 0;
+    margin-bottom: 30px;
     flex-wrap: wrap;
     justify-content: space-between;
 }
@@ -999,6 +1019,7 @@ a {
     min-height: 145px;
     border: 1px solid #eaeaea;
     margin-bottom: 20px;
+    box-sizing: border-box;
 }
 
 .brand-card a {
@@ -1008,6 +1029,10 @@ a {
 
 .brand-card img {
     margin: auto;
+}
+
+.interskol img {
+    margin-top: 20px;
 }
 
 .services {
@@ -1021,18 +1046,19 @@ a {
     width: 940px;
     display: flex;
     flex-direction: column;
-    padding: 40px 10px;
+    padding: 70px 10px 40px 10px;
 }
 
 .services-intro {
     width: 400px;
-    margin-bottom: 75px;
+    margin-top: 25px;
+    margin-bottom: 68px;
 }
 
 .services-button {
     width: 240px;
     text-align: left;
-    padding: 15px 20px;
+    padding: 16px 20px;
 }
 
 .services-item {
@@ -1070,6 +1096,12 @@ a {
 
 .main-aboutus {
     width: 520px;
+}
+
+.main-aboutus p,
+.main-contacts p {
+    margin-top: 24px;
+    margin-bottom: 0px;
 }
 
 .main-contacts {
@@ -1254,14 +1286,15 @@ input[type="radio"].visually-hidden {
 .user-navigation {
     display: flex;
     justify-content: space-between;
+    padding-top: 15px;
 }
 
 .user-navigation a {
-    padding: 12px 25px;
+    padding: 12px 23px;
 }
 
 .login-link a {
-    padding-left: 50px;
+    padding-left: 47px;
     position: relative;
 }
 
@@ -1270,7 +1303,7 @@ input[type="radio"].visually-hidden {
     content: "";
     
     top: 16px;
-    left: 20px;
+    left: 13px;
     
     width: 21px;
     height: 21px;
@@ -1391,6 +1424,7 @@ input[type="radio"].visually-hidden {
     padding: 20px;
     box-sizing: border-box;
     min-height: 122px;
+    overflow: hidden;
 }
 
 .promo-column-1 {
@@ -1473,11 +1507,16 @@ input[type="radio"].visually-hidden {
     display: none;
 }
 
-.catalog-item-new,
-.promo-item-new {
+.item-new {
     position: absolute;
     top: 0;
     right: 5px;
+    color: #ffffff;
+    background-color: #ee3643;
+    padding: 0px 30px;
+    margin: 0;
+    
+    transform: rotate(45deg) translate(25px, -14px);
 }
 
 .social-button {
@@ -1560,6 +1599,11 @@ input[type="radio"].visually-hidden {
     display: none;
 }
 
+
+.services-item.guarantee {
+    display: none;
+}
+
 .services-item.delivery {
     background-image: url("../img/delivery-truck.png");
     background-repeat: no-repeat;
@@ -1609,4 +1653,64 @@ input[type="radio"].visually-hidden {
     background-image: url("../img/partners-list-marker.png");
     background-repeat: no-repeat;
     background-position: 0 0;
+}
+
+.brands-popular {
+    margin-bottom: 70px;
+}
+
+.guarantee .services-item-description {
+    width: 390px;
+}
+
+.services-item.guarantee {
+    background-image: url("../img/icon-guarantee.png");
+    background-repeat: no-repeat;
+    background-position: 239px 3px;
+    
+    background-size: 389px 283px;
+}
+
+.credit .services-item-description {
+    width: 280px;
+}
+
+.services-item.credit {
+    background-image: url("../img/icon-credit.png");
+    background-repeat: no-repeat;
+    background-position: 167px 1px;
+    
+    background-size: 465px 285px;
+    
+    padding-bottom: 88px;
+    padding-right: 15px;
+}
+
+.credit .services-item-description {
+    padding-bottom: 21px;
+}
+
+.credit-button {
+    padding-left: 45px;
+    padding-right: 45px;
+}
+
+.pagination-list {
+    display: flex;
+    flex-wrap: wrap;
+    
+    padding: 0;
+    margin: 0;
+    
+    list-style: none;
+}
+
+
+
+.modal-map {
+    /* position: fixed;*/
+    top: 130px;
+    left: 160px;
+    width: 940px;
+    box-shadow: 0 0 3px rgba(41, 52, 73, 0.5)
 }
