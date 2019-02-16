@@ -15,6 +15,17 @@ a {
     text-decoration: none;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
 .header {
     font-family: Cuprum, Arial, sans-serif;
     font-size: 17px;
@@ -736,18 +747,93 @@ a {
 .filters {
     text-transform: uppercase;
 }
+
 .filters-general-title,
 .sort-title {
     font-family: "PT Sans", Arial, sans-serif;
     font-size: 13px;
     line-height: 18px;
     color: #000000;
+    padding: 10px 20px;
 }
 
 .filter-title {
     font-size: 17px;
     line-height: 30px;
     font-weight: bold;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.power-title {
+    padding-top: 21px;
+}
+
+.range-controls {
+    position: relative;
+    display: block;
+    background-color: #f7f3ec;
+    margin-bottom: 9px;
+    padding: 40px 20px;
+    border-radius: 2px;
+}
+
+.range-controls .scale {
+    height: 2px;
+    
+    background: #d7dcde;
+    margin-left: 5px;
+}
+
+.range-controls .slider-bar {
+    width: 80%;
+    height: 2px;
+    
+    background: #00ca74;
+}
+
+.range-toggle {
+    position: absolute;
+    top: 32px;
+    
+    width: 4px;
+    height: 4px;
+    
+    background: #ababab;
+    border: 8px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+    cursor: pointer;
+}
+
+.range-toggle-min {
+    left: 22px;
+}
+
+.range-toggle-max {
+    right: 40px;
+}
+
+.price-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price-range {
+    height: 38px;
+    margin-bottom: 25px;
+    background-color: #f7f3ec;
+    border-radius: 2px;
+    width: 98px;
+    border: none;
+    text-align: center;
+    padding: 0;
+}
+
+.dash {
+    padding: 0px 7px 25px 7px;
+    font-size: 15px;
 }
 
 .price-range::placeholder {
@@ -759,6 +845,8 @@ a {
 .brands-list,
 .power-source-list  {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .brands-list label,
@@ -770,6 +858,112 @@ a {
 
 .filters-field {
     border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.filter-option {
+    margin-bottom: 20px;
+    padding-left: 34px;
+}
+
+.filter-option label {
+    position: relative;
+    
+    display: block;
+    
+    cursor: pointer;
+    user-select: none;
+}
+
+.checkbox-label::before {
+    content: "";
+    position: absolute;
+    
+    top: -1px;
+    left: -34px;
+    
+    width: 25px;
+    height: 25px;
+    
+    background-image: url("../img/checkbox-off.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    
+    opacity: 0.3;
+}
+
+.filter-input-checkbox:checked + .checkbox-label::before {
+    content: "";
+    
+    position: absolute;
+    
+    width: 25px;
+    height: 25px;
+    
+    background-image: url("../img/checkbox-on.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.radio-label::before {
+    content: "";
+    
+    position: absolute;
+    top: -1px;
+    left: -34px;
+    
+    width: 16px;
+    height: 16px;
+    
+    border: 4px solid #c5c5c5;
+    border-radius: 50%;
+}
+
+.radio-label::before {
+    content: "";
+    
+    position: absolute;
+    top: -1px;
+    left: -34px;
+    
+    width: 16px;
+    height: 16px;
+    
+    border: 4px solid #c5c5c5;
+    border-radius: 50%;
+}
+
+.filter-input-radio:checked + .radio-label::after {
+    content: "";
+    
+    position: absolute;
+    top: 7px;
+    left: -26px;
+    
+    width: 8px;
+    height: 8px;
+    
+    background-color: #c5c5c5;
+    border-radius: 50%;
+}
+
+.filter-button {
+    padding: 10px 40px;
+    color: #000000;
+    background-color: transparent;
+    border: 1px solid #e5e5e5;
+    border-radius: 2px;
+}
+
+.filter-button:hover,
+.filter-button:focus {
+    border-color: #bdc6ca;
+    background-color: transparent;
+}
+.filter-button:active {
+    border-color: #ee3643;
+    background-color: transparent;
 }
 
 .sort-list {
@@ -780,10 +974,9 @@ a {
     margin: 0;
 }
 
-.filters-general-title,
-.slider-bar,
-.price-range {
+.filters-general-title {
     background-color: #f7f3ec;
+    border-radius: 2px;
 }
 
 .sort-button {
@@ -1086,6 +1279,7 @@ a {
 .columns {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 87px;
 }
 
 .main-aboutus,
@@ -1240,8 +1434,8 @@ input[type="radio"].visually-hidden {
     display: flex;
     background-color: #f7f3ec;
     align-items: center;
-    padding: 8px 20px;
     margin-bottom: 20px;
+    border-radius: 2px;
 }
 
 .sort-list {
@@ -1705,12 +1899,118 @@ input[type="radio"].visually-hidden {
     list-style: none;
 }
 
+.modal-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 
+    display: none;
+    /*display: flex; */
+}
 
 .modal-map {
-    /* position: fixed;*/
-    top: 130px;
-    left: 160px;
+    position: relative;
     width: 940px;
-    box-shadow: 0 0 3px rgba(41, 52, 73, 0.5)
+    box-shadow: 0 0 15px 1px rgba(41, 52, 73, 0.5);
+
+    margin: auto;
+}
+
+.modal-feedback {
+    position: relative;
+    width: 620px;
+
+    background: #ffffff;
+    box-shadow: 0 0 50px 1px rgba(41, 52, 73, 0.5);
+    border-top: 7px solid #ee3643;
+
+    margin: auto;
+
+    box-sizing: border-box;
+}
+
+.form-input-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 35px 80px;
+}
+
+.modal-button-wrapper {
+    background-color: #f4f4f4;
+    padding: 37px 80px;
+}
+
+.feedback-form-button {
+    width: 100%;
+    padding-bottom: 10px;
+    padding-top: 12px;
+}
+
+.feedback-form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.feedback-item {
+    margin-bottom: 0;
+}
+
+.feedback-item input {
+    border: 2px solid #dee3e4;
+    border-radius: 2px;
+
+    padding: 10px 15px;
+    width: 220px;
+
+    box-sizing: border-box;
+}
+
+.feedback-text {
+    width: 100%;
+}
+
+.feedback-text label {
+    margin-top: 9px;
+}
+
+.feedback-text textarea {
+    width: 100%;
+    padding: 10px 15px;
+
+    border: 2px solid #dee3e4;
+    border-radius: 2px;
+
+    box-sizing: border-box;
+}
+
+.modal-close {
+    position: absolute;
+    top: 9px;
+    right: 9px;
+
+    background: transparent;
+    color: transparent;
+    border: none;
+
+    margin: 0;
+    padding: 0;
+
+    width: 21px;
+    height: 21px;
+
+    background-image: url("../img/modal-x.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    cursor: pointer;
+}
+
+.map img {
+    display: block;
+}
+
+.map {
+    margin: 0;
 }

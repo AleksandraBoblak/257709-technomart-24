@@ -76,61 +76,62 @@
                     <form class="filter-form" method="get" action="https://echo.htmlacademy.ru">
                         <fieldset class="filters-field">
                             <legend class="filter-title">Цена:</legend>
-                            <div class="slider-bar">
-                                <div class="slider-bar-line"></div>
-                                <div class="slider-bar-min"></div>
-                                <div class="slider-bar-max"></div>
+                            <div class="range-controls">
+                                <div class="scale">
+                                    <div class="slider-bar"></div>
+                                </div>
+                                <div class="range-toggle range-toggle-min"></div>
+                                <div class="range-toggle range-toggle-max"></div>
                             </div>
-                            <label for="filter-price-min">Минимальная цена</label>
-                            <input id="filter-price-min" type="number" class="price-range price-min" placeholder="0" name="min-price" min="0">
-                            <label for="filter-price-max">Максимальная цена</label>
-                            <input id="filter-price-max" type="number" class="price-range price-max" placeholder="30000" name="max-price" min="0">
+                            <div class="price-controls">
+                                <label for="filter-price-min">
+                                    <span class="visually-hidden">Минимальная цена</span>
+                                </label>
+                                <input id="filter-price-min" type="number" class="price-range price-min" placeholder="0" name="min-price" min="0">
+                                <div class="dash">&mdash;</div>
+                                <label for="filter-price-max">
+                                    <span class="visually-hidden">Максимальная цена</span>
+                                </label>
+                                <input id="filter-price-max" type="number" class="price-range price-max" placeholder="30000" name="max-price" min="0">
+                            </div>
                         </fieldset>
                         <fieldset class="filters-field">
                             <legend class="filter-title">Производители:</legend>
                             <ul class="brands-list">
                                 <li class="filter-option">
-                                    <label>
-                                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" value="BOCSH" name="brands[]" checked>
-                                        BOCSH
-                                    </label>
+                                    <input class="visually-hidden filter-input filter-input-checkbox" id="bosch" type="checkbox" value="BOCSH" name="brands[]" checked>
+                                    <label for="bosch" class="checkbox-label">BOCSH</label>
                                 </li>
                                 <li class="filter-option">
-                                    <label>
-                                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" value="Interskol" name="brands[]" >Интерскол
-                                    </label>
+                                    <input class="visually-hidden filter-input filter-input-checkbox" id="interskol" type="checkbox" value="Interskol" name="brands[]">
+                                    <label for="interskol" class="checkbox-label">Интерскол</label>
                                 </li>
                                 <li class="filter-option">
-                                    <label>
-                                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" value="Makita" name="brands[]" checked>Makita
-                                    </label>
+                                    <input class="visually-hidden filter-input filter-input-checkbox" id="Makita" type="checkbox" value="Makita" name="brands[]" checked>
+                                    <label for="Makita" class="checkbox-label">Makita</label>
                                 </li>
                                 <li class="filter-option">
-                                    <label>
-                                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" value="Dewalt" name="brands[]">DeWALT
-                                    </label>
+                                    <input class="visually-hidden filter-input filter-input-checkbox" id="dewalt" type="checkbox" value="Dewalt" name="brands[]">
+                                    <label for="dewalt" class="checkbox-label">DeWALT</label>
                                 </li>
                                 <li class="filter-option">
-                                    <label>
-                                        <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" value="Hitachi" name="brands[]">Hitachi
-                                    </label>
+                                    <input class="visually-hidden filter-input filter-input-checkbox" id="hitachi" type="checkbox" value="Hitachi" name="brands[]">
+                                    <label for="hitachi" class="checkbox-label">Hitachi</label>
                                 </li>
                             </ul>
                         </fieldset>
                         <fieldset class="filters-field">
-                            <legend class="filter-title">Питание:</legend>
+                            <legend class="filter-title power-title">Питание:</legend>
                             <ul class="power-source-list">
                                 <li class="filter-option">
-                                    <label>
-                                        <input class="visually-hidden filter-input filter-input-radio" 
-                                        type="radio" name="source" value="accumulator" checked>Аккумуляторные
-                                    </label>
+                                    <input id="accumulator" class="visually-hidden filter-input filter-input-radio" 
+                                    type="radio" name="source" value="accumulator" checked>
+                                    <label for="accumulator" class="radio-label">Аккумуляторные</label>
                                 </li>
                                 <li class="filter-option">
-                                    <label>
-                                        <input class="visually-hidden filter-input filter-input-radio" 
-                                        type="radio" name="source" value="power-line">Сетевые
-                                    </label>
+                                    <input id="power-line" class="visually-hidden filter-input filter-input-radio" 
+                                    type="radio" name="source" value="power-line">
+                                    <label for="power-line" class="radio-label">Сетевые</label>
                                 </li>
                             </ul>
                             <button type="submit" class="button filter-button">Показать</button>
