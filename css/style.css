@@ -707,17 +707,109 @@ input[type=number] {
     line-height: 21px;
     color: #000000;
     background-color: #ffffff;
+    
+    display: block;
+    padding: 12px;
+    padding-left: 48px;
+    
+    position: relative;
 }
 
 .user-name:active {
     color: rgba(0, 0, 0, 0.3);
 }
 
+.user-name::before {
+    position: absolute;
+    content: "";
+    
+    top: 13px;
+    left: 16px;
+    
+    width: 20px;
+    height: 20px;
+    
+    background-image: url("../img/icon-user.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    
+    opacity: 0.3;
+}
+
+.user-name:hover::before,
+.user-name:focus::before { 
+    opacity: 1;
+}
+
+.user-name:active::before { 
+    opacity: 0.3;
+}
+
+.profile-account {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.profile-logout {
+    width: 40px;
+    min-height: 45px;
+    position: relative;
+    
+    background-color: #ffffff;
+}
+
+.logout::after {
+    position: absolute;
+    content: "";
+    
+    top: 14px;
+    right: 11px;
+    
+    width: 20px;
+    height: 20px;
+    
+    background-image: url("../img/icon-logout.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    
+    opacity: 0.3;
+}
+
+.logout:hover::after,
+.logout:focus::after {
+    opacity: 1;
+}
+
+.logout:active::after { 
+    opacity: 0.3;
+}
+
 .profile-links {
     list-style: none;
+    padding: 0;
+    margin: 0;
+    
     font-family: Cuprum, Arial, sans-serif;
     font-size: 16px;
     line-height: 18px;
+    
+    display: flex;
+    justify-content: flex-start;
+}
+
+.profile-links li {
+    margin-left: 15px;
+}
+
+.dot {
+    width: 4px;
+    height: 4px;
+    
+    background-color: #32425c;
+    border-radius: 50%;
+    
+    align-self: center;
+    margin-left: 15px;
 }
 
 .profile-links a {
@@ -738,10 +830,43 @@ input[type=number] {
     list-style: none;
     line-height: 18px;
     text-transform: uppercase;
+    
+    padding: 0;
+    margin: 0;
+    margin-bottom: 22px;
+    
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
 .breadcrumbs a {
     color: #000000;
+}
+
+.breadcrumbs li {
+    position: relative;
+    
+    margin-right: 42px;
+}
+
+.breadcrumbs li::after {
+    content: "";
+    
+    position: absolute;
+    top: 3px;
+    right: -25px;
+    
+    width: 8px;
+    height: 12px;
+    
+    background-image: url("../img/icon-right-small.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.breadcrumbs-current::after {
+    display: none;
 }
 
 .filters {
@@ -1083,13 +1208,16 @@ input[type=number] {
 .header-column {
     width: 280px;
     padding: 45px 0px;
-    margin-left: 20px;
 }
 
 .header-title {
-    padding-left: 35px;
-    width: 240px;
+    padding-left: 50px;
+    width: 260px;
     box-sizing: border-box;
+}
+
+.profile {
+    width: 300px;
 }
 
 .site-navigation {
@@ -1402,15 +1530,6 @@ input[type="radio"].visually-hidden {
 
 /****************** Catalog Layout ******************/
 
-.breadcrumbs {
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-.breadcrumbs li {
-    padding: 20px;
-}
 
 .inner-title {
     background-color: #f2f6f8;
@@ -1905,7 +2024,7 @@ input[type="radio"].visually-hidden {
     left: 0;
     right: 0;
     bottom: 0;
-
+    
     display: none;
     /*display: flex; */
 }
@@ -1914,20 +2033,20 @@ input[type="radio"].visually-hidden {
     position: relative;
     width: 940px;
     box-shadow: 0 0 15px 1px rgba(41, 52, 73, 0.5);
-
+    
     margin: auto;
 }
 
 .modal-feedback {
     position: relative;
     width: 620px;
-
+    
     background: #ffffff;
     box-shadow: 0 0 50px 1px rgba(41, 52, 73, 0.5);
     border-top: 7px solid #ee3643;
-
+    
     margin: auto;
-
+    
     box-sizing: border-box;
 }
 
@@ -1961,10 +2080,10 @@ input[type="radio"].visually-hidden {
 .feedback-item input {
     border: 2px solid #dee3e4;
     border-radius: 2px;
-
+    
     padding: 10px 15px;
     width: 220px;
-
+    
     box-sizing: border-box;
 }
 
@@ -1979,10 +2098,10 @@ input[type="radio"].visually-hidden {
 .feedback-text textarea {
     width: 100%;
     padding: 10px 15px;
-
+    
     border: 2px solid #dee3e4;
     border-radius: 2px;
-
+    
     box-sizing: border-box;
 }
 
@@ -1990,17 +2109,17 @@ input[type="radio"].visually-hidden {
     position: absolute;
     top: 9px;
     right: 9px;
-
+    
     background: transparent;
     color: transparent;
     border: none;
-
+    
     margin: 0;
     padding: 0;
-
+    
     width: 21px;
     height: 21px;
-
+    
     background-image: url("../img/modal-x.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
