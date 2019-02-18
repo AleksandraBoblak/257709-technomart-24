@@ -61,18 +61,16 @@
     <main>
         <div class="breadcrumbs-wrapper container">
             <ul class="breadcrumbs">
-                <li><a class="home-icon" href="index.html">Главная</a></li>
+                <li>
+                    <a class="home-icon" href="index.html">
+                        <span class="visually-hidden">Главная</span>
+                    </a>
+                </li>
                 <li><a href="catalog.html">Каталог</a></li>
                 <li><a href="tool.html">Инструмент</a></li>
                 <li class="breadcrumbs-current">Перфораторы</li>
             </ul>
         </div>
-        <section class="modal modal-item-added">
-            <h2 class="modal-title">Товар добавлен в корзину!</h2>
-            <a class="button" href="order.html">Оформить заказ</a>
-            <button class="modal-close" type="button">Продолжить закупки</button>
-            <button class="modal-close" type="button">Закрыть</button>
-        </section>
         <div class="container">
             <h1 class="title title-blue inner-title">Перфораторы</h1>
         </div>
@@ -141,8 +139,8 @@
                                     <label for="power-line" class="radio-label">Сетевые</label>
                                 </li>
                             </ul>
-                            <button type="submit" class="button filter-button">Показать</button>
                         </fieldset>
+                        <button type="submit" class="button filter-button">Показать</button>
                     </form>
                 </section>
             </div>
@@ -151,11 +149,13 @@
                     <div class="sort-wrapper">
                         <h2 class="title sort-title">Сортировка:</h2>
                         <ul class="sort-list">
-                            <li class="sort-current"><button class="sort-button">По цене</button></li>
-                            <li><button class="sort-button">По типу</button></li>
-                            <li><button class="sort-button">По функционалу</button></li>
-                            <li class="sort-current"><button class="sort-button sort-button-up">По возрастанию</button></li>
-                            <li><button class="sort-button sort-button-down">По убыванию</button></li>
+                            <li class="sort-current sort-item"><button class="sort-button">По цене</button></li>
+                            <li class="sort-item"><button class="sort-button">По типу</button></li>
+                            <li class="sort-item"><button class="sort-button">По функционалу</button></li>
+                            <li class="sort-item sort-arrows">
+                                <button class="sort-arrow sort-arrow-up current"><span class="visually-hidden">По возрастанию</span></button>
+                                <button class="sort-arrow sort-arrow-down"><span class="visually-hidden">По убыванию</span></button>
+                            </li>
                         </ul>
                     </div>
                     <h2 class="visually-hidden">Список товаров</h2>
@@ -409,16 +409,28 @@
                         </li>
                     </ul>
                 </div>
-                <p class="footer-feedback">
-                    Обратная связь:<br>
-                    <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-                </p>
-                <p class="footer-copyright">
-                    Разработано &mdash;<br>
-                    <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
-                </p>
+                <div class="footer-column-wrapper">
+                    <p class="footer-feedback">
+                        Обратная связь:<br>
+                        <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+                    </p>
+                    <p class="footer-copyright">
+                        Разработано &mdash;<br>
+                        <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
+                    </p>
+                </div>
             </div>
         </section>
     </footer>
+    <div class="modal-wrapper">
+        <section class="modal modal-item-added">
+            <h2 class="modal-title">Товар добавлен в корзину!</h2>
+            <div class="modal-button-wrapper">
+                <a class="button" href="order.html">Оформить заказ</a>
+                <button class="modal-continue" type="button">Продолжить закупки</button>
+            </div>
+            <button class="modal-close" type="button">Закрыть</button>
+        </section>
+    </div>
 </body>
 </html>
