@@ -153,7 +153,7 @@ input[type=number] {
     color: #ee3643;
     border: 3px solid #ffffff;
     
-    padding: 12px 10px 7px 21px;
+    padding: 12px 10px 7px 26px;
     margin-bottom: 5px;
     
     background-image: url("../img/icon-phone.svg");
@@ -1074,7 +1074,7 @@ input[type=number] {
     opacity: 0.4;
 }
 
-.checkbox-label:active::before {
+.filter-input-checkbox:disabled + .checkbox-label::before {
     opacity: 0.1;
 }
 
@@ -1111,8 +1111,8 @@ input[type=number] {
     border-color: #b5b5b5;
 }
 
-.radio-label:active::before {
-    border-color: ##b5b5b5;
+.filter-input-radio:disabled + .radio-label::before {
+    border-color: #b5b5b5;
     opacity: 0.3;
 }
 
@@ -1121,8 +1121,8 @@ input[type=number] {
     background-color: #b5b5b5;
 }
 
-.filter-input-radio:checked + .radio-label:active::after {
-    background-color: #b5b5b5;
+.filter-input-radio:disabled + .radio-label::after {
+    border-color: #b5b5b5;
     opacity: 0.3;
 }
 
@@ -1163,6 +1163,8 @@ input[type=number] {
     border: none;
     border-bottom: 1px dotted #ee3643;
     background-color: #f7f3ec;
+
+    cursor: pointer;
 }
 
 .sort-arrow {
@@ -1333,8 +1335,12 @@ input[type=number] {
     align-items: center;
     justify-content: space-between;
     
-    padding: 45px 0 40px 35px;
+    padding: 41px 0 40px 35px;
     box-sizing: border-box;
+}
+
+.inner-page .header-middle {
+    padding-top: 44px;
 }
 
 .header-column {
@@ -1342,9 +1348,14 @@ input[type=number] {
 }
 
 .header-title {
-    padding-left: 23px;
-    width: 245px;
+    padding-left: 17px;
+    width: 220px;
     box-sizing: border-box;
+}
+
+.inner-page .header-title {
+    padding-left: 19px;
+    width: 240px;
 }
 
 .profile {
@@ -1769,6 +1780,7 @@ input[type="radio"].visually-hidden {
     justify-content: space-between;
     align-self: flex-start;
     padding-top: 15px;
+    width: 280px;
 }
 
 .user-navigation a {
