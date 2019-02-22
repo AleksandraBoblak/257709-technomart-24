@@ -421,7 +421,7 @@
             </div>
         </section>
     </footer>
-    <div class="modal-wrapper">
+    <div class="modal-wrapper modal-wrapper-added">
         <section class="modal modal-item-added">
             <h2 class="modal-title">Товар добавлен в корзину!</h2>
             <div class="modal-button-wrapper">
@@ -431,5 +431,38 @@
             <button class="modal-close" type="button">Закрыть</button>
         </section>
     </div>
+    <script>
+        var addedItemButtons = document.querySelectorAll(".buy");
+        var addedItemPopup = document.querySelector(".modal-wrapper-added");
+        var addedItemClose = addedItemPopup.querySelector(".modal-close");
+        var addedItemContunue = addedItemPopup.querySelector(".modal-continue");
+        
+        
+        for (var i = 0; i < addedItemButtons.length; i++) {
+            addedItemButtons[i].addEventListener("click", function(evt) {
+                evt.preventDefault();
+                addedItemPopup.classList.add("modal-show");
+            });
+        }
+        
+        addedItemClose.addEventListener("click", function(evt) {
+            evt.preventDefault();
+            addedItemPopup.classList.remove("modal-show");
+        });
+        
+        addedItemContunue.addEventListener("click", function(evt) {
+            evt.preventDefault();
+            addedItemPopup.classList.remove("modal-show");
+        });
+        
+        window.addEventListener("keydown", function(evt) {
+            if(evt.keyCode === 27) {
+                evt.preventDefault();
+                if (addedItemPopup.classList.contains("modal-show")) {
+                    addedItemPopup.classList.remove("modal-show");
+                }
+            }
+        });
+    </script>
 </body>
 </html>

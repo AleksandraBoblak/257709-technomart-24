@@ -204,7 +204,7 @@ input[type="radio"].visually-hidden {
 .user-navigation a {
     color: #000000;
     background-color: #ffffff;
-
+    
     font-size: 21px;
     line-height: 21px;
     padding: 12px 23px;
@@ -236,10 +236,10 @@ input[type="radio"].visually-hidden {
     font-size: 14px;
     line-height: 18px;
     text-transform: uppercase;
-
+    
     color: #ffffff;
     background-color: #ee3643;
-
+    
     padding: 11px 0;
     border: none;
     border-radius: 2px;
@@ -402,7 +402,7 @@ input[type="radio"].visually-hidden {
 
 .slider-2 {
     display: none;
-
+    
     background-color: #d3c2ac;
     background-image: url("../img/slider-perforator-2.jpg");
     background-position: 0 0;
@@ -465,10 +465,10 @@ input[type="radio"].visually-hidden {
 .catalog-item {
     width: 220px;
     border: 1px solid #eaeaea;
-
+    
     padding-bottom: 20px;
     box-sizing: border-box;
-
+    
     position: relative;
     display: flex;
     flex-direction: column;
@@ -544,7 +544,7 @@ input[type="radio"].visually-hidden {
     list-style: none;
     padding: 0;
     margin: 0;
-
+    
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -555,6 +555,7 @@ input[type="radio"].visually-hidden {
     color: #ffffff;
     border: none;
     box-shadow: inset 0px -3px 0 0 #367315;
+    outline: none;
 }
 
 .button.buy:hover,
@@ -571,6 +572,7 @@ input[type="radio"].visually-hidden {
     background-color: #ffffff;
     color: #32425c;
     border: #63a63e 3px solid;
+    outline: none;
 }
 
 .button.add-to-bookmarks:hover,
@@ -886,10 +888,10 @@ input[type="radio"].visually-hidden {
 .profile-links li::after {
     position: absolute;
     content: "";
-
+    
     top: 9px;
     right: -20px;
-
+    
     width: 4px;
     height: 4px;
     
@@ -1023,14 +1025,19 @@ input[type="radio"].visually-hidden {
 }
 
 .price-range {
-    height: 38px;
+    font-size: 17px;
+    line-height: 18px;
+    color: #000000;
+
+    padding: 7px 0 11px;
     margin-bottom: 25px;
+
     background-color: #f7f3ec;
     border-radius: 2px;
+
     width: 98px;
     border: none;
     text-align: center;
-    padding: 0;
 }
 
 .dash {
@@ -1214,9 +1221,9 @@ input[type="radio"].visually-hidden {
     border: none;
     border-bottom: 1px dotted #ee3643;
     background-color: #f7f3ec;
-
+    
     cursor: pointer;
-
+    
     margin: 0 21px;
     padding: 0;
 }
@@ -1313,7 +1320,7 @@ input[type="radio"].visually-hidden {
     list-style: none;
     padding: 0;
     margin: 0;
-
+    
     display: flex;
     flex-wrap: wrap;
     
@@ -1492,7 +1499,7 @@ input[type="radio"].visually-hidden {
     left: 0;
     width: 100%;
     align-items: center;
-
+    
     margin: 0;
     padding-top: 43px;
     padding-bottom: 37px;
@@ -1646,7 +1653,7 @@ input[type="radio"].visually-hidden {
 }
 
 .learn-more-button,
-.main-feedback-button {
+.feedback-button {
     padding: 10px;
     text-align: center;
     margin: auto 0 0 0;
@@ -1979,7 +1986,7 @@ input[type="radio"].visually-hidden {
     top: 0;
     bottom: 0;
     width: 81px;
-
+    
     padding: 0;
     
     border: none;
@@ -2015,7 +2022,7 @@ input[type="radio"].visually-hidden {
 .slider-arrow-left:hover::before,
 .slider-arrow-left:focus::before {
     filter: drop-shadow(0px 0px 2px #494949)
-            drop-shadow(0px 0px 2px #ffffff);
+    drop-shadow(0px 0px 2px #ffffff);
     
 }
 
@@ -2037,7 +2044,7 @@ input[type="radio"].visually-hidden {
 .slider-arrow-right:hover::before,
 .slider-arrow-right:focus::before {
     filter: drop-shadow(0px 0px 2px #494949)
-            drop-shadow(0px 0px 2px #ffffff);
+    drop-shadow(0px 0px 2px #ffffff);
     
 }
 
@@ -2051,12 +2058,12 @@ input[type="radio"].visually-hidden {
     position: absolute;
     top: 0;
     right: 5px;
-
+    
     color: #ffffff;
     background-color: #ee3643;
     font-family: Cuprum, Arial, sans-serif;
     font-size: 16px;
-
+    
     padding: 2px 30px;
     margin: 0;
     
@@ -2065,7 +2072,7 @@ input[type="radio"].visually-hidden {
 
 .social-button {
     position: relative;
-
+    
     display: block;
     height: 42px;
     width: 42px;
@@ -2230,7 +2237,6 @@ input[type="radio"].visually-hidden {
     bottom: 0;
     
     display: none;
-    /*display: flex; */
 }
 
 .modal-map {
@@ -2290,6 +2296,7 @@ input[type="radio"].visually-hidden {
     width: 220px;
     
     box-sizing: border-box;
+    outline: none;
 }
 
 .feedback-item input:hover {
@@ -2316,6 +2323,7 @@ input[type="radio"].visually-hidden {
     border-radius: 2px;
     
     box-sizing: border-box;
+    outline: none;
 }
 
 .feedback-item textarea:hover {
@@ -2368,10 +2376,14 @@ input[type="radio"].visually-hidden {
     background-position: 0 0;
 }
 
-.inner-page .modal-wrapper {
+.modal-wrapper-added {
     position: fixed;
     display: none;
-    /*display: flex;*/
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .modal-item-added {
@@ -2389,7 +2401,7 @@ input[type="radio"].visually-hidden {
     font-size: 30px;
     line-height: 30px;
     font-weight: normal;
-
+    
     padding: 25px 80px 23px 80px;
     text-align: left;
 }
@@ -2398,10 +2410,10 @@ input[type="radio"].visually-hidden {
     content: "";
     display: inline-block;
     vertical-align: middle;
-
+    
     width: 66px;
     height: 66px;
-
+    
     background-image: url("../img/icon-checkmark.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -2421,7 +2433,7 @@ input[type="radio"].visually-hidden {
     line-height: 18px;
     text-transform: uppercase;
     padding: 11px 0;
-
+    
     color: #000000;
     background-color: #ffffff;
     margin-left: 20px;
@@ -2437,4 +2449,54 @@ input[type="radio"].visually-hidden {
 .modal-continue:active {
     color: rgba(0, 0, 0, 0.3);
     background-color: #ffffff;
+}
+
+.modal-show {
+    display: flex;
+    
+    animation: bounce 0.6s;
+}
+
+.modal-error {
+    animation: shake 0.6s;
+  }
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-2000px);
+    }
+    
+    70% {
+        transform: translateY(30px);
+    }
+    
+    90% {
+        transform: translateY(-10px);
+    }
+    
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes shake {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-10px);
+    }
+    
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(10px);
+    }
 }
