@@ -24,14 +24,14 @@ if (feedbackPopup) {
     feedbackButton.addEventListener("click", function (evt) {
         evt.preventDefault();
         feedbackPopup.classList.add("js-modal-show");
-               
+        
         if (storedName) {
             feedbackName.value = storedName;
         }
         if (storedEmail) {
             feedbackEmail.value = storedEmail;
         }
-
+        
         if (storedName && storedEmail) {
             feedbackText.focus();
         } else if (storedName) {
@@ -108,3 +108,50 @@ if (addedItemPopup) {
     });
     
 }
+
+/* Slider */
+
+var arrowLeft = document.querySelector(".js-arrow-left");
+var arrowRight = document.querySelector(".js-arrow-right");
+
+var sliderDrill = document.querySelector(".js-slider-1");
+var sliderPerforator = document.querySelector(".js-slider-2");
+
+arrowLeft.addEventListener("click", function(evt) {
+    evt.preventDefault();
+    var activeSlide;
+    var inactiveSlide;
+    if (sliderDrill.classList.contains("js-show-initial") || sliderDrill.classList.contains("js-show-left") || sliderDrill.classList.contains("js-show-right")) {
+        activeSlide = sliderDrill;
+        inactiveSlide = sliderPerforator;
+    } else {
+        activeSlide = sliderPerforator;
+        inactiveSlide = sliderDrill;
+    }
+
+    activeSlide.classList.remove("js-show-initial");
+    activeSlide.classList.remove("js-show-left");
+    activeSlide.classList.remove("js-show-right");
+
+    inactiveSlide.classList.add("js-show-left");
+
+});
+
+arrowRight.addEventListener("click", function(evt) {
+    evt.preventDefault();
+    var activeSlide;
+    var inactiveSlide;
+    if (sliderDrill.classList.contains("js-show-initial") || sliderDrill.classList.contains("js-show-left") || sliderDrill.classList.contains("js-show-right")) {
+        activeSlide = sliderDrill;
+        inactiveSlide = sliderPerforator;
+    } else {
+        activeSlide = sliderPerforator;
+        inactiveSlide = sliderDrill;
+    }
+
+    activeSlide.classList.remove("js-show-initial");
+    activeSlide.classList.remove("js-show-left");
+    activeSlide.classList.remove("js-show-right");
+
+    inactiveSlide.classList.add("js-show-right");
+});
