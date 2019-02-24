@@ -2462,13 +2462,13 @@ input[type="radio"].visually-hidden {
     background-color: #ffffff;
 }
 
-.modal-show {
+.js-modal-show {
     display: flex;
     
     animation: bounce 0.6s;
 }
 
-.modal-error {
+.js-modal-error {
     animation: shake 0.6s;
   }
 

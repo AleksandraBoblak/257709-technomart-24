@@ -115,7 +115,7 @@
                         </div>
                     </a>
                     <p class="catalog-item-actions">
-                        <button class="button buy">Купить</button>
+                        <button class="button buy js-buy">Купить</button>
                         <button class="button add-to-bookmarks">В закладки</button>
                     </p>
                     <p class="catalog-item-price">
@@ -134,7 +134,7 @@
                         </div>
                     </a>
                     <p class="catalog-item-actions">
-                        <button class="button buy">Купить</button>
+                        <button class="button buy js-buy">Купить</button>
                         <button class="button add-to-bookmarks">В закладки</button>
                     </p>
                     <p class="catalog-item-price">
@@ -153,7 +153,7 @@
                         </div>
                     </a>
                     <p class="catalog-item-actions">
-                        <button class="button buy">Купить</button>
+                        <button class="button buy js-buy">Купить</button>
                         <button class="button add-to-bookmarks">В закладки</button>
                     </p>
                     <p class="catalog-item-price">
@@ -172,7 +172,7 @@
                         </div>
                     </a>
                     <p class="catalog-item-actions">
-                        <button class="button buy">Купить</button>
+                        <button class="button buy js-buy">Купить</button>
                         <button class="button add-to-bookmarks">В закладки</button>
                     </p>
                     <p class="catalog-item-price">
@@ -306,7 +306,7 @@
                 <h2 class="title title-black">Контакты</h2>
                 <p class="">Вы можете забрать товар сами,<br> заехав в наш офис:</p>
                 <img class="map-preview" src="img/map.jpg" width="300" height="158" alt="Карта офиса по адресу ул. Б. Конюшенная, д. 19/8, Санкт-Петербург">
-                <button class="button feedback-button">Заблудились? Напишите нам</button>
+                <button class="button feedback-button js-feedback-button">Заблудились? Напишите нам</button>
             </section>
         </div>
         <div class="modal-wrapper">
@@ -315,17 +315,17 @@
                 <p class="map">
                     <img src="img/map-big.jpg" width="940" height="446" alt="Офис Техномарта по адресу ул. Б. Конюшенная, д. 19/8, Санкт-Петербург">
                 </p>
-                <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
+                <button class="modal-close js-modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
             </section>
         </div>
-        <div class="modal-wrapper modal-wrapper-feedback">
+        <div class="modal-wrapper modal-wrapper-feedback js-modal-feedback">
             <section class="modal modal-feedback">
                 <h2 class="visually-hidden">Написать письмо</h2>
-                <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+                <form class="feedback-form js-feedback-form" action="https://echo.htmlacademy.ru" method="post">
                     <div class="form-input-wrapper">
                         <p class="feedback-item">
                             <label for="feedback-name">Ваше имя:</label>
-                            <input id="feedback-name" class="feedback-name" type="text" name="name" value="" placeholder="Имя Фамилия">
+                            <input id="feedback-name" class="feedback-name js-feedback-name" type="text" name="name" value="" placeholder="Имя Фамилия">
                         </p>
                         <p class="feedback-item">
                             <label for="feedback-email">Ваш e-mail:</label>
@@ -339,7 +339,7 @@
                     <div class="modal-button-wrapper">
                         <button class="button feedback-form-button" type="submit">Отправить</button>
                     </div>
-                    <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
+                    <button class="modal-close js-modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
                 </form> 
             </section>
         </div>
@@ -375,8 +375,8 @@
             </div>
         </section>
         <section class="footer-links">
+            <h2 class="visually-hidden">Ссылки</h2>
             <div class="footer-links-wrapper container">
-                <h2 class="visually-hidden">Ссылки</h2>
                 <p class="footer-copyright-disclaimer">
                     &copy; 2010-2017 Компания «Техномарт»<br>
                     Все права защищены
@@ -413,14 +413,14 @@
             </div>
         </section>
     </footer>
-    <div class="modal-wrapper modal-wrapper-added">
+    <div class="modal-wrapper modal-wrapper-added js-modal-added">
         <section class="modal modal-item-added">
             <h2 class="modal-title">Товар добавлен в корзину!</h2>
             <div class="modal-button-wrapper">
                 <a class="button" href="order.html">Оформить заказ</a>
-                <button class="modal-continue" type="button">Продолжить закупки</button>
+                <button class="modal-continue js-modal-continue" type="button">Продолжить закупки</button>
             </div>
-            <button class="modal-close" type="button">Закрыть</button>
+            <button class="modal-close js-modal-close" type="button">Закрыть</button>
         </section>
     </div>
     <script src="js/script.js"></script>
