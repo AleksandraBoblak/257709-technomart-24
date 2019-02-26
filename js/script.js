@@ -155,3 +155,28 @@ arrowRight.addEventListener("click", function(evt) {
 
     inactiveSlide.classList.add("js-show-right");
 });
+
+var mapLink = document.querySelector(".js-map-preview");
+var mapPopup = document.querySelector(".js-modal-map");
+
+var mapClose = mapPopup.querySelector(".js-modal-close");
+
+mapLink.addEventListener("click", function(evt) {
+    evt.preventDefault();
+    mapPopup.classList.add("js-modal-show");
+});
+
+mapClose.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    mapPopup.classList.remove("js-modal-show");
+    mapPopup.classList.remove("js-modal-error");
+});
+
+window.addEventListener("keydown", function(evt) {
+    if(evt.keyCode === 27) {
+        evt.preventDefault();
+        if (mapPopup.classList.contains("js-modal-show")) {
+            mapPopup.classList.remove("js-modal-show");
+        }
+    }
+});
