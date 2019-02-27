@@ -688,6 +688,8 @@ input[type="radio"].visually-hidden {
     background-color: #32425c;
     font-weight: bold;
     border: none;
+    outline: none;
+    cursor: pointer;
 }
 
 .services-button:hover,
@@ -700,7 +702,9 @@ input[type="radio"].visually-hidden {
     color: #32425c;
 }
 
-.services-button.current {
+.services-button-current,
+.services-button-current:hover,
+.services-button-current:focus {
     background-color: #ffffff;
     color: #32425c;
 }
@@ -1649,7 +1653,7 @@ input[type="radio"].visually-hidden {
     width: 940px;
     display: flex;
     flex-direction: column;
-    padding: 61px 10px 40px 10px;
+    padding: 61px 10px 0px 10px;
 }
 
 .services-intro {
@@ -1666,6 +1670,7 @@ input[type="radio"].visually-hidden {
 
 .services-item {
     width: 100%;
+    padding-bottom: 115px;
 }
 
 .services-columns {
@@ -1683,7 +1688,6 @@ input[type="radio"].visually-hidden {
 .services-item-description {
     margin-top: 0;
     width: 275px;
-    padding-bottom: 75px
 }
 
 .columns {
@@ -2206,6 +2210,10 @@ input[type="radio"].visually-hidden {
 .services-item.guarantee,
 .services-item.credit {
     display: none;
+}
+
+.services-item-show {
+    display: list-item;
 }
 
 .services-item.delivery {

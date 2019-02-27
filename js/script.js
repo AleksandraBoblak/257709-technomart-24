@@ -128,13 +128,13 @@ arrowLeft.addEventListener("click", function(evt) {
         activeSlide = sliderPerforator;
         inactiveSlide = sliderDrill;
     }
-
+    
     activeSlide.classList.remove("js-show-initial");
     activeSlide.classList.remove("js-show-left");
     activeSlide.classList.remove("js-show-right");
-
+    
     inactiveSlide.classList.add("js-show-left");
-
+    
 });
 
 arrowRight.addEventListener("click", function(evt) {
@@ -148,11 +148,11 @@ arrowRight.addEventListener("click", function(evt) {
         activeSlide = sliderPerforator;
         inactiveSlide = sliderDrill;
     }
-
+    
     activeSlide.classList.remove("js-show-initial");
     activeSlide.classList.remove("js-show-left");
     activeSlide.classList.remove("js-show-right");
-
+    
     inactiveSlide.classList.add("js-show-right");
 });
 
@@ -180,3 +180,23 @@ window.addEventListener("keydown", function(evt) {
         }
     }
 });
+
+var servicesButtons = document.querySelectorAll(".js-services-button");
+var servicesItems = document.querySelectorAll(".js-services-item");
+
+function listenServiceButtonClick(button, item) {
+    button.addEventListener("click", function(evt) {
+        evt.preventDefault();
+
+        for (var i = 0; i < servicesButtons.length; i++) {
+            servicesButtons[i].classList.remove("services-button-current");
+        }
+
+        button.classList.add("services-button-current");
+    });
+}
+
+
+for (var i = 0; i < servicesButtons.length; i++) {
+    listenServiceButtonClick(servicesButtons[i], servicesItems[i]);
+}
