@@ -3,8 +3,6 @@ var feedbackPopup = document.querySelector(".js-modal-feedback");
 
 if (feedbackPopup) {
     
-    var feedbackClose = feedbackPopup.querySelector(".js-modal-close");
-    
     var feedbackName = feedbackPopup.querySelector(".js-feedback-name");
     var feedbackForm = feedbackPopup.querySelector(".js-feedback-form");
     var feedbackEmail = feedbackPopup.querySelector("[name=email]");
@@ -23,7 +21,7 @@ if (feedbackPopup) {
     
     feedbackButton.addEventListener("click", function (evt) {
         evt.preventDefault();
-        feedbackPopup.classList.add("js-modal-show");
+        feedbackPopup.classList.add("is-modal-show");
         
         if (storedName) {
             feedbackName.value = storedName;
@@ -41,12 +39,6 @@ if (feedbackPopup) {
         }
     });
     
-    feedbackClose.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        feedbackPopup.classList.remove("js-modal-show");
-        feedbackPopup.classList.remove("js-modal-error");
-    });
-    
     feedbackForm.addEventListener("submit", function (evt) {
         if (!feedbackName.value || !feedbackEmail.value || !feedbackText.value) {
             evt.preventDefault();
@@ -58,17 +50,6 @@ if (feedbackPopup) {
             localStorage.setItem("email", feedbackEmail.value);
         }
     });
-    
-    window.addEventListener("keydown", function (evt) {
-        if (evt.keyCode === 27) {
-            evt.preventDefault();
-            if (feedbackPopup.classList.contains("js-modal-show")) {
-                feedbackPopup.classList.remove("js-modal-show");
-                feedbackPopup.classList.remove("js-modal-error");
-            }
-        }
-    });
-    
 }
 
 /* Catalog */
@@ -77,109 +58,62 @@ var addedItemButtons = document.querySelectorAll(".js-buy");
 var addedItemPopup = document.querySelector(".js-modal-added");
 
 if (addedItemPopup) {
-    var addedItemClose = addedItemPopup.querySelector(".js-modal-close");
     var addedItemContunue = addedItemPopup.querySelector(".js-modal-continue");
-    
     
     for (var i = 0; i < addedItemButtons.length; i++) {
         addedItemButtons[i].addEventListener("click", function(evt) {
             evt.preventDefault();
-            addedItemPopup.classList.add("js-modal-show");
+            addedItemPopup.classList.add("is-modal-show");
         });
     }
     
-    addedItemClose.addEventListener("click", function(evt) {
-        evt.preventDefault();
-        addedItemPopup.classList.remove("js-modal-show");
-    });
-    
     addedItemContunue.addEventListener("click", function(evt) {
         evt.preventDefault();
-        addedItemPopup.classList.remove("js-modal-show");
-    });
-    
-    window.addEventListener("keydown", function(evt) {
-        if(evt.keyCode === 27) {
-            evt.preventDefault();
-            if (addedItemPopup.classList.contains("js-modal-show")) {
-                addedItemPopup.classList.remove("js-modal-show");
-            }
-        }
+        addedItemPopup.classList.remove("is-modal-show");
     });
     
 }
 
 /* Slider */
 
+var slides = document.querySelectorAll(".js-slide");
+var currentSlide = 0;
+
 var arrowLeft = document.querySelector(".js-arrow-left");
 var arrowRight = document.querySelector(".js-arrow-right");
 
-var sliderDrill = document.querySelector(".js-slider-1");
-var sliderPerforator = document.querySelector(".js-slider-2");
-
-arrowLeft.addEventListener("click", function(evt) {
-    evt.preventDefault();
-    var activeSlide;
-    var inactiveSlide;
-    if (sliderDrill.classList.contains("js-show-initial") || sliderDrill.classList.contains("js-show-left") || sliderDrill.classList.contains("js-show-right")) {
-        activeSlide = sliderDrill;
-        inactiveSlide = sliderPerforator;
-    } else {
-        activeSlide = sliderPerforator;
-        inactiveSlide = sliderDrill;
-    }
+if (arrowLeft && arrowRight) {
+    arrowLeft.addEventListener("click", function(evt) {
+        evt.preventDefault();
+        slides[currentSlide].classList.remove("js-show-left");
+        slides[currentSlide].classList.remove("js-show-right");
+        
+        currentSlide = (currentSlide + 1) % slides.length;
+        
+        slides[currentSlide].classList.add("js-show-left");
+    });
     
-    activeSlide.classList.remove("js-show-initial");
-    activeSlide.classList.remove("js-show-left");
-    activeSlide.classList.remove("js-show-right");
-    
-    inactiveSlide.classList.add("js-show-left");
-    
-});
-
-arrowRight.addEventListener("click", function(evt) {
-    evt.preventDefault();
-    var activeSlide;
-    var inactiveSlide;
-    if (sliderDrill.classList.contains("js-show-initial") || sliderDrill.classList.contains("js-show-left") || sliderDrill.classList.contains("js-show-right")) {
-        activeSlide = sliderDrill;
-        inactiveSlide = sliderPerforator;
-    } else {
-        activeSlide = sliderPerforator;
-        inactiveSlide = sliderDrill;
-    }
-    
-    activeSlide.classList.remove("js-show-initial");
-    activeSlide.classList.remove("js-show-left");
-    activeSlide.classList.remove("js-show-right");
-    
-    inactiveSlide.classList.add("js-show-right");
-});
+    arrowRight.addEventListener("click", function(evt) {
+        evt.preventDefault();
+        slides[currentSlide].classList.remove("js-show-left");
+        slides[currentSlide].classList.remove("js-show-right");
+        
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        
+        slides[currentSlide].classList.add("js-show-right");
+    });
+}
 
 var mapLink = document.querySelector(".js-map-preview");
 var mapPopup = document.querySelector(".js-modal-map");
 
-var mapClose = mapPopup.querySelector(".js-modal-close");
-
-mapLink.addEventListener("click", function(evt) {
-    evt.preventDefault();
-    mapPopup.classList.add("js-modal-show");
-});
-
-mapClose.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    mapPopup.classList.remove("js-modal-show");
-    mapPopup.classList.remove("js-modal-error");
-});
-
-window.addEventListener("keydown", function(evt) {
-    if(evt.keyCode === 27) {
+if(mapLink) {
+    mapLink.addEventListener("click", function(evt) {
         evt.preventDefault();
-        if (mapPopup.classList.contains("js-modal-show")) {
-            mapPopup.classList.remove("js-modal-show");
-        }
-    }
-});
+        mapPopup.classList.add("is-modal-show");
+    });
+}
+
 
 var servicesButtons = document.querySelectorAll(".js-services-button");
 var servicesItems = document.querySelectorAll(".js-services-item");
@@ -187,16 +121,39 @@ var servicesItems = document.querySelectorAll(".js-services-item");
 function listenServiceButtonClick(button, item) {
     button.addEventListener("click", function(evt) {
         evt.preventDefault();
-
+        
         for (var i = 0; i < servicesButtons.length; i++) {
             servicesButtons[i].classList.remove("services-button-current");
         }
-
+        
         button.classList.add("services-button-current");
     });
 }
 
-
 for (var i = 0; i < servicesButtons.length; i++) {
     listenServiceButtonClick(servicesButtons[i], servicesItems[i]);
 }
+
+function hidePopups() {
+    var popups = document.querySelectorAll(".is-modal-show");
+    for (var i = 0; i < popups.length; i++) {
+        popups[i].classList.remove("is-modal-show");
+        popups[i].classList.remove("js-modal-error");
+    }
+}
+
+var closePopupButtons = document.querySelectorAll(".js-modal-close");
+
+for (var i = 0; i < closePopupButtons.length; i++) {
+    closePopupButtons[i].addEventListener("click", function (evt) {
+        evt.preventDefault();
+        hidePopups();
+    });
+}
+
+window.addEventListener("keydown", function(evt) {
+    if(evt.keyCode === 27) {
+        evt.preventDefault();
+        hidePopups();
+    }
+});
