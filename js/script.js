@@ -87,6 +87,7 @@ if (arrowLeft && arrowRight) {
         evt.preventDefault();
         slides[currentSlide].classList.remove("js-show-left");
         slides[currentSlide].classList.remove("js-show-right");
+        slides[currentSlide].classList.remove("js-show-initial");
         
         currentSlide = (currentSlide + 1) % slides.length;
         
@@ -97,6 +98,7 @@ if (arrowLeft && arrowRight) {
         evt.preventDefault();
         slides[currentSlide].classList.remove("js-show-left");
         slides[currentSlide].classList.remove("js-show-right");
+        slides[currentSlide].classList.remove("js-show-initial");
         
         currentSlide = (currentSlide - 1 + slides.length) % slides.length;
         

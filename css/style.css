@@ -2335,6 +2335,7 @@ input[type="radio"].visually-hidden {
     z-index: 2;
     
     border: none;
+    display: block;
 }
 
 .modal-feedback {
