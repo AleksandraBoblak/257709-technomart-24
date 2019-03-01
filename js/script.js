@@ -126,9 +126,11 @@ function listenServiceButtonClick(button, item) {
         
         for (var i = 0; i < servicesButtons.length; i++) {
             servicesButtons[i].classList.remove("services-button-current");
+            servicesItems[i].classList.remove("services-item-current");
         }
         
         button.classList.add("services-button-current");
+        item.classList.add("services-item-current");
     });
 }
 
