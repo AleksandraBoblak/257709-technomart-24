@@ -52,8 +52,6 @@ if (feedbackPopup) {
     });
 }
 
-/* Catalog */
-
 var addedItemButtons = document.querySelectorAll(".js-buy");
 var addedItemPopup = document.querySelector(".js-modal-added");
 
@@ -85,24 +83,22 @@ var arrowRight = document.querySelector(".js-arrow-right");
 if (arrowLeft && arrowRight) {
     arrowLeft.addEventListener("click", function(evt) {
         evt.preventDefault();
-        slides[currentSlide].classList.remove("js-show-left");
-        slides[currentSlide].classList.remove("js-show-right");
+        slides[currentSlide].classList.remove("js-show");
         slides[currentSlide].classList.remove("js-show-initial");
         
         currentSlide = (currentSlide + 1) % slides.length;
         
-        slides[currentSlide].classList.add("js-show-left");
+        slides[currentSlide].classList.add("js-show");
     });
     
     arrowRight.addEventListener("click", function(evt) {
         evt.preventDefault();
-        slides[currentSlide].classList.remove("js-show-left");
-        slides[currentSlide].classList.remove("js-show-right");
+        slides[currentSlide].classList.remove("js-show");
         slides[currentSlide].classList.remove("js-show-initial");
         
         currentSlide = (currentSlide - 1 + slides.length) % slides.length;
         
-        slides[currentSlide].classList.add("js-show-right");
+        slides[currentSlide].classList.add("js-show");
     });
 }
 

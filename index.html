@@ -11,12 +11,14 @@
     <header class="header">
         <div class="header-top">
             <div class="header-top-wrapper container">
-                <a class="header-logo" href="index.html">
+                <a class="header-logo">
                     <img src="img/logo.png" width="110" height="18" alt="Логотип «Техномарта»">
                 </a>
-                <label class="search-label">
-                    <input type="search" class="search" name="search" value="" placeholder="Поиск:" aria-label="Поиск по сайту">
-                </label>
+                <form>
+                    <label class="search-label">
+                        <input type="search" class="search" name="search" value="" placeholder="Поиск:" aria-label="Поиск по сайту">
+                    </label>
+                </form>
                 <a class="header-link bookmarks" href="bookmarks.html">Закладки: 0</a>
                 <a class="header-link cart" href="cart.html">Корзина: 0</a>
                 <a class="order" href="order.html">Оформить заказ</a>
@@ -84,12 +86,12 @@
                             <li class="slider-1 js-slide js-show-initial">
                                 <p class="slider-title">Дрели</p>
                                 <p class="slider-slogan">Соседям на радость!</p>
-                                <a class="button slider-button" href="technomart-catalog.psd">Открыть каталог</a>
+                                <a class="button slider-button" href="catalog.html">Открыть каталог</a>
                             </li>
                             <li class="slider-2 js-slide">
                                 <p class="slider-title">Перфораторы</p>
                                 <p class="slider-slogan">Настоящие мужские игрушки</p>
-                                <a class="button slider-button" href="technomart-catalog.psd">Открыть каталог</a>
+                                <a class="button slider-button" href="catalog.html">Открыть каталог</a>
                             </li>
                         </ul>
                         <button class="slider-arrow slider-arrow-left js-arrow-left" type="button">Влево</button>
@@ -379,7 +381,7 @@
             <h2 class="visually-hidden">Ссылки</h2>
             <div class="footer-links-wrapper container">
                 <p class="footer-copyright-disclaimer">
-                    &copy; 2010-2017 Компания «Техномарт»<br>
+                    &copy; 2010-2017 Компания «Техномарт»
                     Все права защищены
                 </p>
                 <div class="footer-social">
@@ -403,11 +405,11 @@
                 </div>
                 <div class="footer-column-wrapper">
                     <p class="footer-feedback">
-                        Обратная связь:<br>
+                        Обратная связь:
                         <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
                     </p>
                     <p class="footer-copyright">
-                        Разработано &mdash;<br>
+                        Разработано &mdash;
                         <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
                     </p>
                 </div>
@@ -424,6 +426,6 @@
             <button class="modal-close js-modal-close" type="button">Закрыть</button>
         </section>
     </div>
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
 </body>
 </html>

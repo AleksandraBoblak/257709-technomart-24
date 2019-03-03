@@ -93,22 +93,30 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+
     background-color: #ee3643;
     box-shadow: 0px 5px 0 0 #b52933;
-    padding: 20px 40px 16px 40px;
+    padding: 20px 41px 14px 41px;
 }
 
 .header-link:hover,
 .header-link:focus,
-.search:hover,
+.search:hover {
+    background-color: #212a3a;
+}
+
 .site-navigation a:hover,
 .site-navigation a:focus {
-    background-color: #212a3a;
+    background-color: #293449;
 }
 
 .search {
     border: none;
     flex-grow: 1;
+    min-width: 264px;
 }
 
 .search::placeholder {
@@ -123,9 +131,13 @@ input[type="radio"].visually-hidden {
     color: #000000;
 }
 
-.header-link:active,
-.site-navigation a:active {
+.header-link:active {
     background-color: #161d29;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.site-navigation a:active {
+    background-color: #1d2739;
     color: rgba(255, 255, 255, 0.6);
 }
 
@@ -244,7 +256,7 @@ input[type="radio"].visually-hidden {
     
     padding: 11px 0;
     border: none;
-    border-radius: 2px;
+    border-radius: 3px;
     cursor: pointer;
 }
 
@@ -264,7 +276,7 @@ input[type="radio"].visually-hidden {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    margin-bottom: 50px;
+    margin-bottom: 54px;
 }
 
 .promo-item-title {
@@ -430,42 +442,12 @@ input[type="radio"].visually-hidden {
     background-repeat: no-repeat;
 }
 
-@keyframes slide-left {
-    0% {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
 .slider-show {
     z-index: 1;
 }
 
-.js-show-left {
+.js-show {
     z-index: 1;
-    animation-name: slide-left;
-    animation-duration: 0.4s;
-}
-
-@keyframes slide-right {
-    0% {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-.js-show-right {
-    z-index: 1;
-    animation-name: slide-right;
-    animation-duration: 0.4s;
 }
 
 .js-show-initial {
@@ -514,13 +496,13 @@ input[type="radio"].visually-hidden {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 26px;
+    padding: 26px 24px 25px 28px;
     margin-bottom: 19px;
 }
 
 .popular-button {
     min-width: 253px;
-    padding: 11px 55px;
+    padding: 11px 55px 10px 55px;
     text-align: center;
     box-sizing: border-box;
 }
@@ -549,7 +531,7 @@ input[type="radio"].visually-hidden {
     order: 2;
     text-align: center;
     margin: 0 30px;
-    margin-bottom: 11px;
+    margin-bottom: 13px;
 }
 
 .catalog-brand {
@@ -579,13 +561,13 @@ input[type="radio"].visually-hidden {
     color: #ffffff;
     background-color: #ee3643;
     
-    padding: 10px 5px 10px 15px;
+    padding: 10px 5px 10px 19px;
     margin: 0 46px;
     
     width: 98px;
     
     position: relative;
-    left: 0px;
+    left: -4px;
     top: 0px;
     border-radius: 3px 0 0 2px;
 }
@@ -738,7 +720,7 @@ input[type="radio"].visually-hidden {
     margin: 0;
     padding-top: 21px;
     padding-left: 38px;
-    margin-bottom: 20px;
+    margin-bottom: 17px;
 }
 
 .feedback-item > label {
@@ -814,6 +796,7 @@ input[type="radio"].visually-hidden {
     flex-shrink: 0;
     justify-content: space-around;
     padding-right: 16px;
+    max-width: 280px;
 }
 
 .footer-feedback a,
@@ -1002,7 +985,7 @@ input[type="radio"].visually-hidden {
 .breadcrumbs li {
     position: relative;
     
-    margin-right: 42px;
+    margin-right: 41px;
 }
 
 .breadcrumbs li::after {
@@ -1010,7 +993,7 @@ input[type="radio"].visually-hidden {
     
     position: absolute;
     top: 2px;
-    right: -27px;
+    right: -23px;
     
     width: 8px;
     height: 12px;
@@ -1206,6 +1189,11 @@ input[type="radio"].visually-hidden {
 .filter-input-checkbox:disabled + .checkbox-label::before {
     opacity: 0.1;
 }
+
+.filter-input:disabled + label {
+    color: rgba(0, 0, 0, 0.4);
+}
+
 
 .radio-label::before {
     content: "";
@@ -1478,12 +1466,13 @@ input[type="radio"].visually-hidden {
     align-items: center;
     justify-content: space-between;
     
-    padding: 41px 0 40px 35px;
+    padding: 45px 0 37px 35px;
     box-sizing: border-box;
 }
 
 .inner-page .header-middle {
     padding-top: 44px;
+    padding-bottom: 39px;
 }
 
 .header-column {
@@ -1619,7 +1608,7 @@ input[type="radio"].visually-hidden {
     justify-content: space-between;
     align-items: center;
     margin-right: 20px;
-    margin-bottom: 22px;
+    margin-bottom: 20px;
 }
 
 .inner-page .catalog-item:nth-child(3n) {
@@ -1704,6 +1693,7 @@ input[type="radio"].visually-hidden {
 .columns {
     display: flex;
     justify-content: space-between;
+    padding-top: 4px;
     margin-bottom: 85px;
 }
 
@@ -1770,6 +1760,7 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-navigation-top {
+    position: relative;
     display: flex;
     align-items: center;
     margin-bottom: 30px;
@@ -1832,8 +1823,8 @@ input[type="radio"].visually-hidden {
 
 .inner-title {
     background-color: #f2f6f8;
-    padding: 30px;
-    margin-bottom: 15px;
+    padding: 28px;
+    margin-bottom: 21px;
 }
 
 .inner-columns-wrapper {
@@ -1870,6 +1861,7 @@ input[type="radio"].visually-hidden {
     position: relative;
     padding: 0;
     margin: 0;
+    padding-right: 5px;
     
     list-style: none;
     font-size: 13px;
@@ -1886,7 +1878,7 @@ input[type="radio"].visually-hidden {
 
 .about-perforators .container {
     padding-top: 63px;
-    padding-bottom: 69px;
+    padding-bottom: 70px;
 }
 
 .perforators-title {
