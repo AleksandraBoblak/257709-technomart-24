@@ -11,17 +11,21 @@
     <header class="header">
         <div class="header-top">
             <div class="header-top-wrapper container">
-                <a class="header-logo" href="index.html">
-                    <img src="img/tecnomart-logo.svg" width="110" height="18" alt="Логотип «Техномарта»">
-                </a>
-                <form>
-                    <label class="search-label">
-                        <input type="search" class="search" name="search" value="" placeholder="Поиск:" aria-label="Поиск по сайту">
-                    </label>
-                </form>
-                <a class="header-link bookmarks" href="bookmarks.html">Закладки: 0</a>
-                <a class="header-link cart cart-full" href="cart.html">Корзина: 10</a>
-                <a class="order" href="order.html">Оформить заказ</a>
+                <div class="header-top-column">
+                    <a class="header-logo" href="index.html">
+                        <img src="img/tecnomart-logo.svg" width="110" height="18" alt="Логотип «Техномарта»">
+                    </a>
+                </div>
+                <div class="header-top-column top-column-2">
+                    <form>
+                        <label class="search-label">
+                            <input type="search" class="search" name="search" value="" placeholder="Поиск:" aria-label="Поиск по сайту">
+                        </label>
+                    </form>
+                    <a class="header-link bookmarks" href="bookmarks.html">Закладки: 0</a>
+                    <a class="header-link cart cart-full" href="cart.html">Корзина: 10</a>
+                    <a class="order" href="order.html">Оформить заказ</a>
+                </div>
             </div>
         </div>
         <div class="header-middle">
@@ -150,9 +154,14 @@
                     <div class="sort-wrapper">
                         <h2 class="title sort-title">Сортировка:</h2>
                         <ul class="sort-list">
-                            <li class="sort-current sort-item"><button class="sort-button">По цене</button></li>
-                            <li class="sort-item"><button class="sort-button">По типу</button></li>
-                            <li class="sort-item"><button class="sort-button">По функционалу</button></li>
+                            <li class="sort-current sort-item"><a class="sort-button">По цене</a></li>
+                            <li class="sort-item"><a class="sort-button">По типу</a></li>
+                            <li class="sort-item"><a class="sort-button">По функционалу</a></li>
+
+                            <li class="sort-current sort-item"><a class="sort-button">По цене</a></li>
+                            <li class="sort-item"><a class="sort-button">По типу</a></li>
+                            <li class="sort-item"><a class="sort-button">По функционалу</a></li>
+                            
                             <li class="sort-item sort-arrows">
                                 <button class="sort-arrow sort-arrow-up current"><span class="visually-hidden">По возрастанию</span></button>
                                 <button class="sort-arrow sort-arrow-down"><span class="visually-hidden">По убыванию</span></button>

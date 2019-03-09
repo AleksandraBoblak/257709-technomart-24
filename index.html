@@ -11,17 +11,21 @@
     <header class="header">
         <div class="header-top">
             <div class="header-top-wrapper container">
-                <a class="header-logo">
-                    <img src="img/tecnomart-logo.svg" width="110" height="18" alt="Логотип «Техномарта»">
-                </a>
-                <form>
-                    <label class="search-label">
-                        <input type="search" class="search" name="search" value="" placeholder="Поиск:" aria-label="Поиск по сайту">
-                    </label>
-                </form>
-                <a class="header-link bookmarks" href="bookmarks.html">Закладки: 0</a>
-                <a class="header-link cart" href="cart.html">Корзина: 0</a>
-                <a class="order" href="order.html">Оформить заказ</a>
+                <div class="header-top-column">
+                    <a class="header-logo">
+                        <img src="img/tecnomart-logo.svg" width="110" height="18" alt="Логотип «Техномарта»">
+                    </a>
+                </div>
+                <div class="header-top-column top-column-2">
+                    <form class="search-form">
+                        <label class="search-label">
+                            <input type="search" class="search" name="search" value="" placeholder="Поиск:" aria-label="Поиск по сайту">
+                        </label>
+                    </form>
+                    <a class="header-link bookmarks" href="bookmarks.html">Закладки: 0</a>
+                    <a class="header-link cart" href="cart.html">Корзина: 0</a>                    
+                    <a class="order" href="order.html">Оформить заказ</a>
+                </div>
             </div>
         </div>
         <div class="header-middle">
@@ -316,7 +320,7 @@
         <div class="modal-wrapper js-modal-map">
             <section class="modal modal-map">
                 <h2 class="visually-hidden">Карта проезда</h2>
-                <iframe src="https://yandex.ru/map-widget/v1/-/CCUYfSzP" width="940" height="446" allowfullscreen="true"></iframe>
+                <iframe src="https://yandex.ru/map-widget/v1/-/CCUYfSzP" width="940" height="446"></iframe>
                 <p class="map">
                     <img src="img/map-big.jpg" width="940" height="446" alt="Офис Техномарта по адресу ул. Б. Конюшенная, д. 19/8, Санкт-Петербург">
                 </p>
