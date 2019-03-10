@@ -1280,7 +1280,8 @@ input[type="radio"].visually-hidden {
     font-size: 13px;
     line-height: 18px;
     color: #000000;
-    margin-right: 118px;
+    margin-right: auto;
+    flex-grow: 1;
 }
 
 .sort-button {
@@ -1291,54 +1292,62 @@ input[type="radio"].visually-hidden {
     background-color: #f7f3ec;
     
     cursor: pointer;
+    outline: none;
     
-    margin: 0 21px;
+    margin: 0 23px;
     padding: 0;
 }
 
-.sort-arrow {
+.sort-direction {
+    list-style: none;
     padding: 0;
-    width: 25px;
+    margin: 0;
+}
+
+.sort-arrows {
+    display: flex;
+    flex-grow: 0;
+
+    padding: 0;
     border: none;
     background: transparent;
     color: transparent;
     cursor: pointer;
 }
 
-.sort-arrow-up::before {
-    position: absolute;
-    content: "";
-    
-    right: 40px;
-    top: -3px;
-    padding: 10px;
-    
-    width: 11px;
-    height: 10px;
-    
-    background-image: url("../img/icon-up-arrow.svg");
+.sort-arrow {
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.sort-arrow:last-child {
+    margin-left: 8px;
+}
+
+.sort-arrow::before {
+    background-position: center;
     background-repeat: no-repeat;
-    background-position: 10px 8px;
+}
+
+.sort-arrow-up::before, 
+.sort-arrow-down::before {
+    content: "";
+    display: block;
     
+    width: 12px;
+    height: 10px;
+
     opacity: 0.2;
 }
 
+.sort-arrow-up::before {
+    background-image: url("../img/icon-up-arrow.svg");
+}
+
 .sort-arrow-down::before {
-    position: absolute;
-    content: "";
-    
-    right: 7px;
-    top: -4px;
-    padding: 10px;
-    
-    width: 11px;
-    height: 10px;
-    
     background-image: url("../img/icon-down-arrow.svg");
-    background-repeat: no-repeat;
-    background-position: 9px 9px;
-    
-    opacity: 0.2;
 }
 
 .sort-arrow-up:hover::before,
@@ -1864,21 +1873,20 @@ input[type="radio"].visually-hidden {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    flex-grow: 1;
     
     margin-left: auto;
     position: relative;
     padding: 0;
     margin: 0;
-    padding-right: 5px;
     
     list-style: none;
     font-size: 13px;
     line-height: 18px;
 }
 
-.sort-item:last-child {
-    flex-grow: 0;
+.sort-item {
+    margin: 0 11px;
+    flex-grow: 1;
 }
 
 .about-perforators-info {
@@ -2140,6 +2148,10 @@ input[type="radio"].visually-hidden {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.promo-column-2 .promo-item:last-child {
+    margin-bottom: 0;
 }
 
 .item-new {

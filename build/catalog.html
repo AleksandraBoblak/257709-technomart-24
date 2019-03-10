@@ -5,21 +5,27 @@
     <title>HTML Academy: Техномарт</title>
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="inner-page">
     <header class="header">
         <div class="header-top">
             <div class="header-top-wrapper container">
-                <a class="header-logo" href="index.html">
-                    <img src="img/logo.png" width="110" height="18" alt="Логотип «Техномарта»">
-                </a>
-                <label class="search-label">
-                    <input type="search" class="search" name="search" value="" placeholder="Поиск:" aria-label="Поиск по сайту">
-                </label>
-                <a class="header-link bookmarks" href="bookmarks.html">Закладки: 0</a>
-                <a class="header-link cart cart-full" href="cart.html">Корзина: 10</a>
-                <a class="order" href="order.html">Оформить заказ</a>
+                <div class="header-top-column">
+                    <a class="header-logo" href="index.html">
+                        <img src="img/tecnomart-logo.svg" width="110" height="18" alt="Логотип «Техномарта»">
+                    </a>
+                </div>
+                <div class="header-top-column top-column-2">
+                    <form>
+                        <label class="search-label">
+                            <input type="search" class="search" name="search" value="" placeholder="Поиск:" aria-label="Поиск по сайту">
+                        </label>
+                    </form>
+                    <a class="header-link bookmarks" href="bookmarks.html">Закладки: 0</a>
+                    <a class="header-link cart cart-full" href="cart.html">Корзина: 10</a>
+                    <a class="order" href="order.html">Оформить заказ</a>
+                </div>
             </div>
         </div>
         <div class="header-middle">
@@ -148,9 +154,11 @@
                     <div class="sort-wrapper">
                         <h2 class="title sort-title">Сортировка:</h2>
                         <ul class="sort-list">
-                            <li class="sort-current sort-item"><button class="sort-button">По цене</button></li>
-                            <li class="sort-item"><button class="sort-button">По типу</button></li>
-                            <li class="sort-item"><button class="sort-button">По функционалу</button></li>
+                            <li class="sort-current sort-item"><a class="sort-button" href="#">По цене</a></li>
+                            <li class="sort-item"><a class="sort-button" href="#">По типу</a></li>
+                            <li class="sort-item"><a class="sort-button" href="#">По функционалу</a></li>
+                        </ul>
+                        <ul class="sort-direction">
                             <li class="sort-item sort-arrows">
                                 <button class="sort-arrow sort-arrow-up current"><span class="visually-hidden">По возрастанию</span></button>
                                 <button class="sort-arrow sort-arrow-down"><span class="visually-hidden">По убыванию</span></button>
@@ -170,8 +178,8 @@
                                 </div>
                             </a>
                             <p class="catalog-item-actions">
-                                <button class="button buy js-buy">Купить</button>
-                                <button class="button add-to-bookmarks">В закладки</button>
+                                <a class="button buy js-buy" href="#">Купить</a>
+                                <a class="button add-to-bookmarks" href="#">В закладки</a>
                             </p>
                             <p class="catalog-item-price">
                                 <span class="price-old">22500 Р.</span>
@@ -189,8 +197,8 @@
                                 </div>
                             </a>
                             <p class="catalog-item-actions">
-                                <button class="button buy js-buy">Купить</button>
-                                <button class="button add-to-bookmarks">В закладки</button>
+                                <a class="button buy js-buy" href="#">Купить</a>
+                                <a class="button add-to-bookmarks" href="#">В закладки</a>
                             </p>
                             <p class="catalog-item-price">
                                 <span class="price-old">30500 Р.</span>
@@ -208,8 +216,8 @@
                                 </div>
                             </a>
                             <p class="catalog-item-actions">
-                                <button class="button buy js-buy">Купить</button>
-                                <button class="button add-to-bookmarks">В закладки</button>
+                                <a class="button buy js-buy" href="#">Купить</a>
+                                <a class="button add-to-bookmarks" href="#">В закладки</a>
                             </p>
                             <p class="catalog-item-price">
                                 <span class="price">12500 Р.</span>
@@ -227,8 +235,8 @@
                                 </div>
                             </a>
                             <p class="catalog-item-actions">
-                                <button class="button buy js-buy">Купить</button>
-                                <button class="button add-to-bookmarks">В закладки</button>
+                                <a class="button buy js-buy" href="#">Купить</a>
+                                <a class="button add-to-bookmarks" href="#">В закладки</a>
                             </p>
                             <p class="catalog-item-price">
                                 <span class="price-old">22500 Р.</span>
@@ -246,8 +254,8 @@
                                 </div>
                             </a>
                             <p class="catalog-item-actions">
-                                <button class="button buy js-buy">Купить</button>
-                                <button class="button add-to-bookmarks">В закладки</button>
+                                <a class="button buy js-buy" href="#">Купить</a>
+                                <a class="button add-to-bookmarks" href="#">В закладки</a>
                             </p>
                             <p class="catalog-item-price">
                                 <span class="price-old">30500 Р.</span>
@@ -266,8 +274,8 @@
                                 </div>
                             </a>
                             <p class="catalog-item-actions">
-                                <button class="button buy js-buy">Купить</button>
-                                <button class="button add-to-bookmarks">В закладки</button>
+                                <a class="button buy js-buy" href="#">Купить</a>
+                                <a class="button add-to-bookmarks" href="#">В закладки</a>
                             </p>
                             <p class="catalog-item-price">
                                 <span class="price">12500 Р.</span>
@@ -284,8 +292,8 @@
                                 </div>
                             </a>
                             <p class="catalog-item-actions">
-                                <button class="button buy js-buy">Купить</button>
-                                <button class="button add-to-bookmarks">В закладки</button>
+                                <a class="button buy js-buy" href="#">Купить</a>
+                                <a class="button add-to-bookmarks" href="#">В закладки</a>
                             </p>
                             <p class="catalog-item-price">
                                 <span class="price-old">22500 Р.</span>
@@ -304,8 +312,8 @@
                                 </div>
                             </a>
                             <p class="catalog-item-actions">
-                                <button class="button buy js-buy">Купить</button>
-                                <button class="button add-to-bookmarks">В закладки</button>
+                                <a class="button buy js-buy" href="#">Купить</a>
+                                <a class="button add-to-bookmarks" href="#">В закладки</a>
                             </p>
                             <p class="catalog-item-price">
                                 <span class="price-old">30500 Р.</span>
@@ -323,8 +331,8 @@
                                 </div>
                             </a>
                             <p class="catalog-item-actions">
-                                <button class="button buy js-buy">Купить</button>
-                                <button class="button add-to-bookmarks">В закладки</button>
+                                <a class="button buy js-buy" href="#">Купить</a>
+                                <a class="button add-to-bookmarks" href="#">В закладки</a>
                             </p>
                             <p class="catalog-item-price">
                                 <span class="price">12500 Р.</span>
@@ -358,7 +366,7 @@
                 <h2 class="visually-hidden">Навигация по сайту</h2>
                 <div class="footer-navigation-top">
                     <a class="footer-logo" href="index.html">
-                        <img src="img/footer-logo.png" width="138" height="23" alt="Логотип «Техномарта»">
+                        <img src="img/tecnomart-logo.svg" width="138" height="23" alt="Логотип «Техномарта»">
                     </a>
                     <ul class="footer-site-navigation">
                         <li><a href="about-us.html">Компания</a></li>
@@ -386,7 +394,7 @@
             <h2 class="visually-hidden">Ссылки</h2>
             <div class="footer-links-wrapper container">
                 <p class="footer-copyright-disclaimer">
-                    &copy; 2010-2017 Компания «Техномарт»<br>
+                    &copy; 2010-2017 Компания «Техномарт»
                     Все права защищены
                 </p>
                 <div class="footer-social">
@@ -410,7 +418,7 @@
                 </div>
                 <div class="footer-column-wrapper">
                     <p class="footer-feedback">
-                        Обратная связь:<br>
+                        Обратная связь:
                         <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
                     </p>
                     <p class="footer-copyright">
