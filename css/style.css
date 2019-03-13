@@ -72,7 +72,7 @@ input[type="radio"].visually-hidden {
     background-color: #ee3643;
     width: 220px;
     box-sizing: border-box;
-    padding: 13px 54px 12px 55px;
+    padding: 12px 54px 9px 55px;
 
     display: block;
     box-shadow: 0px 5px 0 0 #b52933;
@@ -155,7 +155,7 @@ input[type="radio"].visually-hidden {
 }
 
 .order {
-    padding: 13px 20px;
+    padding: 13px 20px 11px 20px;
     background-color: #63a63e;
 }
 
@@ -511,7 +511,7 @@ input[type="radio"].visually-hidden {
     border: 1px solid #eaeaea;
     
     padding-bottom: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
     box-sizing: border-box;
     
     position: relative;
@@ -562,36 +562,8 @@ input[type="radio"].visually-hidden {
     background-size: 100% 100%;
     background-repeat: no-repeat;
     margin: 0 36px 0 43px;
-    padding: 8px 6px 10px 0;
+    padding: 10px 6px 10px 2px;
 }
-    /*background-color: #ee3643;
-    
-    padding: 10px 5px 10px 19px;
-    margin: 0 46px;
-    
-    width: 96px;
-    
-    position: relative;
-    left: -4px;
-    top: 0px;
-    border-radius: 3px 0 0 2px;
-    
-}
-
-.price::after {
-    position: absolute;
-    content: "";
-    
-    top: 0px;
-    right: -20px;
-    
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 19px 0 19px 20px;
-    border-color: transparent transparent transparent #ee3643;
-}
-*/
 
 .brands-icons-list {
     list-style: none;
@@ -1038,7 +1010,7 @@ input[type="radio"].visually-hidden {
 }
 
 .power-title {
-    padding-top: 21px;
+    padding-top: 17px;
 }
 
 .range-controls {
@@ -1142,13 +1114,21 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-form .filters-field:last-of-type {
-    margin-bottom: 55px;
+    margin-bottom: 79px;
     border: none;
 }
 
 .filter-option {
     margin-bottom: 20px;
     padding-left: 34px;
+}
+
+.filter-option:last-child {
+    margin-bottom: 0;
+}
+
+.brands-field {
+    padding-bottom: 24px;
 }
 
 .filter-option label {
@@ -1258,7 +1238,10 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-button {
-    padding: 10px 40px;
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    padding: 9px 39px;
     color: #000000;
     background-color: transparent;
     border: 1px solid #e5e5e5;
@@ -1475,6 +1458,10 @@ input[type="radio"].visually-hidden {
     justify-content: space-between;
 }
 
+.top-column-1 {
+    display: block;
+}
+
 .top-column-2 {
     flex-grow: 1;
 }
@@ -1485,7 +1472,7 @@ input[type="radio"].visually-hidden {
     align-items: center;
     justify-content: space-between;
     
-    padding: 45px 0 37px 35px;
+    padding: 45px 0 38px 35px;
     box-sizing: border-box;
 }
 
@@ -1665,7 +1652,7 @@ input[type="radio"].visually-hidden {
     width: 940px;
     display: flex;
     flex-direction: column;
-    padding: 61px 10px 0px 10px;
+    padding: 64px 10px 0px 10px;
 }
 
 .services-intro {
@@ -1905,8 +1892,7 @@ input[type="radio"].visually-hidden {
 }
 
 .search {
-    padding: 11px 0;
-    padding-left: 50px;
+    padding: 12px 0 11px 50px;
 }
 
 .header-link {
@@ -2290,7 +2276,7 @@ input[type="radio"].visually-hidden {
 }
 
 .brands-popular {
-    margin-bottom: 70px;
+    margin-bottom: 66px;
 }
 
 .delivery .services-item-description {
